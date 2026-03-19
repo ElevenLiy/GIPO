@@ -1,2 +1,4 @@
 *.safetensors filter=lfs diff=lfs merge=lfs -text
 outputs/TOOLATHLON/sft_data.json filter=lfs diff=lfs merge=lfs -text
+*.jsonl filter=lfs diff=lfs merge=lfs -text
+Toolathlon/data/all_messages.json filter=lfs diff=lfs merge=lfs -text
