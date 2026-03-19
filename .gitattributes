@@ -2,3 +2,7 @@
 outputs/TOOLATHLON/sft_data.json filter=lfs diff=lfs merge=lfs -text
 *.jsonl filter=lfs diff=lfs merge=lfs -text
 Toolathlon/data/all_messages.json filter=lfs diff=lfs merge=lfs -text
+/Toolathlon/Toolathlon-Trajectories-merge/claude.jsonl filter=lfs diff=lfs merge=lfs -text
+/Toolathlon/Toolathlon-Trajectories-merge/gpt.jsonl filter=lfs diff=lfs merge=lfs -text
+/Toolathlon/Toolathlon-Trajectories-merge/grok.jsonl filter=lfs diff=lfs merge=lfs -text
+/Toolathlon/Toolathlon-Trajectories-merge/gemini.jsonl filter=lfs diff=lfs merge=lfs -text
