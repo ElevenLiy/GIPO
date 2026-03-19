@@ -1,0 +1,2563 @@
+{
+  "meta": {
+    "algorithm": "BPE",
+    "max_merges": 50,
+    "min_freq": 3,
+    "num_macros": 48,
+    "num_sequences": 1151
+  },
+  "macros": {
+    "macro_000": {
+      "macro_id": "macro_000",
+      "token": "pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+      "atomic_sequence": [
+        "pdf-tools-get_pdf_info[pdf_file_path]",
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]"
+      ],
+      "tool_names": [
+        "pdf-tools-get_pdf_info",
+        "pdf-tools-read_pdf_pages"
+      ],
+      "length": 2,
+      "original_frequency": 206,
+      "current_frequency": 97,
+      "usage_ratio": 0.008794197642792384,
+      "merge_round": 0,
+      "compression_gain": 206,
+      "tool_details": [
+        {
+          "name": "pdf-tools-get_pdf_info",
+          "description": "Get basic information about a PDF file including page count.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future u",
+          "params": [
+            "pdf_file_path"
+          ]
+        },
+        {
+          "name": "pdf-tools-read_pdf_pages",
+          "description": "Read content from PDF file for specified page range.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future use.\n    ",
+          "params": [
+            "end_page",
+            "pdf_file_path",
+            "start_page"
+          ]
+        }
+      ]
+    },
+    "macro_003": {
+      "macro_id": "macro_003",
+      "token": "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_type[element,ref,text]",
+        "playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_type",
+        "playwright_with_chunk-browser_click"
+      ],
+      "length": 2,
+      "original_frequency": 164,
+      "current_frequency": 56,
+      "usage_ratio": 0.005077062556663644,
+      "merge_round": 3,
+      "compression_gain": 164,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_type",
+          "description": "Type text into editable element",
+          "params": [
+            "element",
+            "ref",
+            "text"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        }
+      ]
+    },
+    "macro_004": {
+      "macro_id": "macro_004",
+      "token": "filesystem-list_directory[path] ⊕ filesystem-read_file[path]",
+      "atomic_sequence": [
+        "filesystem-list_directory[path]",
+        "filesystem-read_file[path]"
+      ],
+      "tool_names": [
+        "filesystem-list_directory",
+        "filesystem-read_file"
+      ],
+      "length": 2,
+      "original_frequency": 161,
+      "current_frequency": 94,
+      "usage_ratio": 0.008522212148685404,
+      "merge_round": 4,
+      "compression_gain": 161,
+      "tool_details": [
+        {
+          "name": "filesystem-list_directory",
+          "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understand",
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "filesystem-read_file",
+          "description": "Read the complete contents of a file from the file system. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the co",
+          "params": [
+            "path"
+          ]
+        }
+      ]
+    },
+    "macro_005": {
+      "macro_id": "macro_005",
+      "token": "filesystem-write_file[content,path] ⊕ local-claim_done[]",
+      "atomic_sequence": [
+        "filesystem-write_file[content,path]",
+        "local-claim_done[]"
+      ],
+      "tool_names": [
+        "filesystem-write_file",
+        "local-claim_done"
+      ],
+      "length": 2,
+      "original_frequency": 138,
+      "current_frequency": 138,
+      "usage_ratio": 0.012511332728921125,
+      "merge_round": 5,
+      "compression_gain": 138,
+      "tool_details": [
+        {
+          "name": "filesystem-write_file",
+          "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works",
+          "params": [
+            "content",
+            "path"
+          ]
+        },
+        {
+          "name": "local-claim_done",
+          "description": "claim the task is done",
+          "params": []
+        }
+      ]
+    },
+    "macro_006": {
+      "macro_id": "macro_006",
+      "token": "canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token] ⊕ canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]",
+      "atomic_sequence": [
+        "canvas-canvas_start_quiz_attempt[course_id,quiz_id]",
+        "canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint]",
+        "canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]",
+        "canvas-canvas_start_quiz_attempt[course_id,quiz_id]",
+        "canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint]",
+        "canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]"
+      ],
+      "tool_names": [
+        "canvas-canvas_start_quiz_attempt",
+        "canvas-canvas_list_quiz_questions",
+        "canvas-canvas_submit_quiz_answers",
+        "canvas-canvas_start_quiz_attempt",
+        "canvas-canvas_list_quiz_questions",
+        "canvas-canvas_submit_quiz_answers"
+      ],
+      "length": 6,
+      "original_frequency": 129,
+      "current_frequency": 69,
+      "usage_ratio": 0.006255666364460562,
+      "merge_round": 6,
+      "compression_gain": 69,
+      "tool_details": [
+        {
+          "name": "canvas-canvas_start_quiz_attempt",
+          "description": "Start a new quiz attempt. Returns a quiz_submission object with 'id' field (the quiz_submission_id) and 'validation_token' needed for submitting answers. May return 500 error but still create submissi",
+          "params": [
+            "course_id",
+            "quiz_id"
+          ]
+        },
+        {
+          "name": "canvas-canvas_list_quiz_questions",
+          "description": "List all questions in a quiz. Students: First call canvas_start_quiz_attempt to get quiz_submission_id, then use that ID (NOT quiz_id) with use_submission_endpoint=true.",
+          "params": [
+            "course_id",
+            "quiz_id",
+            "quiz_submission_id",
+            "use_submission_endpoint"
+          ]
+        },
+        {
+          "name": "canvas-canvas_submit_quiz_answers",
+          "description": "Submit answers for a quiz attempt. Use the 'id' from canvas_start_quiz_attempt as submission_id, NOT the quiz_id or any other ID.",
+          "params": [
+            "answers",
+            "course_id",
+            "quiz_id",
+            "submission_id",
+            "validation_token"
+          ]
+        },
+        {
+          "name": "canvas-canvas_start_quiz_attempt",
+          "description": "Start a new quiz attempt. Returns a quiz_submission object with 'id' field (the quiz_submission_id) and 'validation_token' needed for submitting answers. May return 500 error but still create submissi",
+          "params": [
+            "course_id",
+            "quiz_id"
+          ]
+        },
+        {
+          "name": "canvas-canvas_list_quiz_questions",
+          "description": "List all questions in a quiz. Students: First call canvas_start_quiz_attempt to get quiz_submission_id, then use that ID (NOT quiz_id) with use_submission_endpoint=true.",
+          "params": [
+            "course_id",
+            "quiz_id",
+            "quiz_submission_id",
+            "use_submission_endpoint"
+          ]
+        },
+        {
+          "name": "canvas-canvas_submit_quiz_answers",
+          "description": "Submit answers for a quiz attempt. Use the 'id' from canvas_start_quiz_attempt as submission_id, NOT the quiz_id or any other ID.",
+          "params": [
+            "answers",
+            "course_id",
+            "quiz_id",
+            "submission_id",
+            "validation_token"
+          ]
+        }
+      ]
+    },
+    "macro_007": {
+      "macro_id": "macro_007",
+      "token": "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query]",
+      "atomic_sequence": [
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+        "local-web_search[num_results,query]"
+      ],
+      "tool_names": [
+        "pdf-tools-read_pdf_pages",
+        "local-web_search"
+      ],
+      "length": 2,
+      "original_frequency": 95,
+      "current_frequency": 51,
+      "usage_ratio": 0.004623753399818676,
+      "merge_round": 7,
+      "compression_gain": 95,
+      "tool_details": [
+        {
+          "name": "pdf-tools-read_pdf_pages",
+          "description": "Read content from PDF file for specified page range.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future use.\n    ",
+          "params": [
+            "end_page",
+            "pdf_file_path",
+            "start_page"
+          ]
+        },
+        {
+          "name": "local-web_search",
+          "description": "Search the web using Google Serper API with concurrency control and retry mechanisms. Supports various Google search operators.",
+          "params": [
+            "num_results",
+            "query"
+          ]
+        }
+      ]
+    },
+    "macro_008": {
+      "macro_id": "macro_008",
+      "token": "filesystem-list_directory[path] ⊕ filesystem-read_file[head,path,tail]",
+      "atomic_sequence": [
+        "filesystem-list_directory[path]",
+        "filesystem-read_file[head,path,tail]"
+      ],
+      "tool_names": [
+        "filesystem-list_directory",
+        "filesystem-read_file"
+      ],
+      "length": 2,
+      "original_frequency": 80,
+      "current_frequency": 80,
+      "usage_ratio": 0.007252946509519492,
+      "merge_round": 8,
+      "compression_gain": 80,
+      "tool_details": [
+        {
+          "name": "filesystem-list_directory",
+          "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understand",
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "filesystem-read_file",
+          "description": "Read the complete contents of a file from the file system. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the co",
+          "params": [
+            "path"
+          ]
+        }
+      ]
+    },
+    "macro_009": {
+      "macro_id": "macro_009",
+      "token": "playwright_with_chunk-browser_snapshot_navigate_to_next_span[] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span[]",
+        "playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span",
+        "playwright_with_chunk-browser_click"
+      ],
+      "length": 2,
+      "original_frequency": 80,
+      "current_frequency": 50,
+      "usage_ratio": 0.004533091568449683,
+      "merge_round": 9,
+      "compression_gain": 80,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_snapshot_navigate_to_next_span",
+          "description": "Navigate to the next span in the current page snapshot. If already at the last span, stays at the last span. Use this for sequential exploration of page content from top to bottom.",
+          "params": []
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        }
+      ]
+    },
+    "macro_010": {
+      "macro_id": "macro_010",
+      "token": "emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id]",
+      "atomic_sequence": [
+        "emails-read_email[email_id]",
+        "emails-download_attachment[attachment_filename,email_id]"
+      ],
+      "tool_names": [
+        "emails-read_email",
+        "emails-download_attachment"
+      ],
+      "length": 2,
+      "original_frequency": 79,
+      "current_frequency": 29,
+      "usage_ratio": 0.002629193109700816,
+      "merge_round": 10,
+      "compression_gain": 79,
+      "tool_details": [
+        {
+          "name": "emails-read_email",
+          "description": "Read full content of a specific email\n        \n        Args:\n            email_id: Email ID to read\n        ",
+          "params": [
+            "email_id"
+          ]
+        },
+        {
+          "name": "emails-download_attachment",
+          "description": "Download email attachment to configured download path\n        \n        Args:\n            email_id: Email ID containing the attachment\n            attachment_filename: Name of attachment to download\n  ",
+          "params": [
+            "attachment_filename",
+            "email_id"
+          ]
+        }
+      ]
+    },
+    "macro_011": {
+      "macro_id": "macro_011",
+      "token": "filesystem-write_file[content,path] ⊕ terminal-run_command[command]",
+      "atomic_sequence": [
+        "filesystem-write_file[content,path]",
+        "terminal-run_command[command]"
+      ],
+      "tool_names": [
+        "filesystem-write_file",
+        "terminal-run_command"
+      ],
+      "length": 2,
+      "original_frequency": 78,
+      "current_frequency": 36,
+      "usage_ratio": 0.0032638259292837716,
+      "merge_round": 11,
+      "compression_gain": 78,
+      "tool_details": [
+        {
+          "name": "filesystem-write_file",
+          "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works",
+          "params": [
+            "content",
+            "path"
+          ]
+        },
+        {
+          "name": "terminal-run_command",
+          "description": "Allows command (CLI) execution in the directory: /workspace/dumps/workspace\n\nAvailable commands: clear, ifconfig, cat, stat, helm, sed, rm, zip, diff, chmod, wc, awk, head, realpath, ps, gunzip, curl,",
+          "params": [
+            "command"
+          ]
+        }
+      ]
+    },
+    "macro_012": {
+      "macro_id": "macro_012",
+      "token": "word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index] ⊕ word-set_table_alignment_all[filename,horizontal,table_index,vertical]",
+      "atomic_sequence": [
+        "word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index]",
+        "word-set_table_alignment_all[filename,horizontal,table_index,vertical]"
+      ],
+      "tool_names": [
+        "word-set_table_cell_shading",
+        "word-set_table_alignment_all"
+      ],
+      "length": 2,
+      "original_frequency": 78,
+      "current_frequency": 13,
+      "usage_ratio": 0.0011786038077969175,
+      "merge_round": 12,
+      "compression_gain": 78,
+      "tool_details": [
+        {
+          "name": "word-set_table_cell_shading",
+          "description": "Apply shading/filling to a specific table cell.",
+          "params": [
+            "col_index",
+            "filename",
+            "fill_color",
+            "row_index",
+            "table_index"
+          ]
+        },
+        {
+          "name": "word-set_table_alignment_all",
+          "description": "Set text alignment for all cells in a table.",
+          "params": [
+            "filename",
+            "horizontal",
+            "table_index",
+            "vertical"
+          ]
+        }
+      ]
+    },
+    "macro_013": {
+      "macro_id": "macro_013",
+      "token": "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref] ⊕ playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_type[element,ref,text]",
+        "playwright_with_chunk-browser_click[element,ref]",
+        "playwright_with_chunk-browser_type[element,ref,text]",
+        "playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_type",
+        "playwright_with_chunk-browser_click",
+        "playwright_with_chunk-browser_type",
+        "playwright_with_chunk-browser_click"
+      ],
+      "length": 4,
+      "original_frequency": 74,
+      "current_frequency": 24,
+      "usage_ratio": 0.0021758839528558476,
+      "merge_round": 13,
+      "compression_gain": 54,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_type",
+          "description": "Type text into editable element",
+          "params": [
+            "element",
+            "ref",
+            "text"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_type",
+          "description": "Type text into editable element",
+          "params": [
+            "element",
+            "ref",
+            "text"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        }
+      ]
+    },
+    "macro_014": {
+      "macro_id": "macro_014",
+      "token": "excel-get_workbook_metadata[filepath,include_ranges] ⊕ excel-read_data_from_excel[end_cell,filepath,preview_only,sheet_name,start_cell]",
+      "atomic_sequence": [
+        "excel-get_workbook_metadata[filepath,include_ranges]",
+        "excel-read_data_from_excel[end_cell,filepath,preview_only,sheet_name,start_cell]"
+      ],
+      "tool_names": [
+        "excel-get_workbook_metadata",
+        "excel-read_data_from_excel"
+      ],
+      "length": 2,
+      "original_frequency": 66,
+      "current_frequency": 66,
+      "usage_ratio": 0.005983680870353581,
+      "merge_round": 14,
+      "compression_gain": 66,
+      "tool_details": [
+        {
+          "name": "excel-get_workbook_metadata",
+          "description": "Get metadata about workbook including sheets, ranges, etc.",
+          "params": [
+            "filepath"
+          ]
+        },
+        {
+          "name": "excel-read_data_from_excel",
+          "description": "\n    Read data from Excel worksheet with cell metadata including validation rules.\n    \n    Args:\n        filepath: Path to Excel file\n        sheet_name: Name of worksheet\n        start_cell: Startin",
+          "params": [
+            "filepath",
+            "sheet_name"
+          ]
+        }
+      ]
+    },
+    "macro_015": {
+      "macro_id": "macro_015",
+      "token": "local-python-execute[code] ⊕ local-claim_done[]",
+      "atomic_sequence": [
+        "local-python-execute[code]",
+        "local-claim_done[]"
+      ],
+      "tool_names": [
+        "local-python-execute",
+        "local-claim_done"
+      ],
+      "length": 2,
+      "original_frequency": 66,
+      "current_frequency": 66,
+      "usage_ratio": 0.005983680870353581,
+      "merge_round": 15,
+      "compression_gain": 66,
+      "tool_details": [
+        {
+          "name": "local-python-execute",
+          "description": "Execute Python code directly under the agent workspace, and returns stdout, stderr, return code, and execution time in a structured format.",
+          "params": [
+            "code"
+          ]
+        },
+        {
+          "name": "local-claim_done",
+          "description": "claim the task is done",
+          "params": []
+        }
+      ]
+    },
+    "macro_016": {
+      "macro_id": "macro_016",
+      "token": "word-add_heading[filename,level,text] ⊕ word-add_paragraph[filename,text]",
+      "atomic_sequence": [
+        "word-add_heading[filename,level,text]",
+        "word-add_paragraph[filename,text]"
+      ],
+      "tool_names": [
+        "word-add_heading",
+        "word-add_paragraph"
+      ],
+      "length": 2,
+      "original_frequency": 66,
+      "current_frequency": 15,
+      "usage_ratio": 0.0013599274705349048,
+      "merge_round": 16,
+      "compression_gain": 66,
+      "tool_details": [
+        {
+          "name": "word-add_heading",
+          "description": "Add a heading to a Word document.",
+          "params": [
+            "filename",
+            "level",
+            "text"
+          ]
+        },
+        {
+          "name": "word-add_paragraph",
+          "description": "Add a paragraph to a Word document.",
+          "params": [
+            "filename",
+            "text"
+          ]
+        }
+      ]
+    },
+    "macro_017": {
+      "macro_id": "macro_017",
+      "token": "word-highlight_table_header[filename,header_color,table_index,text_color] ⊕ word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index] ⊕ word-set_table_alignment_all[filename,horizontal,table_index,vertical]",
+      "atomic_sequence": [
+        "word-highlight_table_header[filename,header_color,table_index,text_color]",
+        "word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index]",
+        "word-set_table_alignment_all[filename,horizontal,table_index,vertical]"
+      ],
+      "tool_names": [
+        "word-highlight_table_header",
+        "word-set_table_cell_shading",
+        "word-set_table_alignment_all"
+      ],
+      "length": 3,
+      "original_frequency": 65,
+      "current_frequency": 65,
+      "usage_ratio": 0.0058930190389845875,
+      "merge_round": 17,
+      "compression_gain": 65,
+      "tool_details": [
+        {
+          "name": "word-highlight_table_header",
+          "description": "Apply special highlighting to table header row.",
+          "params": [
+            "filename",
+            "header_color",
+            "table_index",
+            "text_color"
+          ]
+        },
+        {
+          "name": "word-set_table_cell_shading",
+          "description": "Apply shading/filling to a specific table cell.",
+          "params": [
+            "col_index",
+            "filename",
+            "fill_color",
+            "row_index",
+            "table_index"
+          ]
+        },
+        {
+          "name": "word-set_table_alignment_all",
+          "description": "Set text alignment for all cells in a table.",
+          "params": [
+            "filename",
+            "horizontal",
+            "table_index",
+            "vertical"
+          ]
+        }
+      ]
+    },
+    "macro_018": {
+      "macro_id": "macro_018",
+      "token": "local-web_search[num_results,query] ⊕ fetch-fetch_html[url]",
+      "atomic_sequence": [
+        "local-web_search[num_results,query]",
+        "fetch-fetch_html[url]"
+      ],
+      "tool_names": [
+        "local-web_search",
+        "fetch-fetch_html"
+      ],
+      "length": 2,
+      "original_frequency": 62,
+      "current_frequency": 62,
+      "usage_ratio": 0.005621033544877607,
+      "merge_round": 18,
+      "compression_gain": 62,
+      "tool_details": [
+        {
+          "name": "local-web_search",
+          "description": "Search the web using Google Serper API with concurrency control and retry mechanisms. Supports various Google search operators.",
+          "params": [
+            "num_results",
+            "query"
+          ]
+        },
+        {
+          "name": "fetch-fetch_html",
+          "description": "Fetch a website and return the content as HTML",
+          "params": [
+            "url"
+          ]
+        }
+      ]
+    },
+    "macro_019": {
+      "macro_id": "macro_019",
+      "token": "pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+      "atomic_sequence": [
+        "pdf-tools-get_pdf_info[pdf_file_path]",
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+        "pdf-tools-get_pdf_info[pdf_file_path]",
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]"
+      ],
+      "tool_names": [
+        "pdf-tools-get_pdf_info",
+        "pdf-tools-read_pdf_pages",
+        "pdf-tools-get_pdf_info",
+        "pdf-tools-read_pdf_pages"
+      ],
+      "length": 4,
+      "original_frequency": 61,
+      "current_frequency": 35,
+      "usage_ratio": 0.003173164097914778,
+      "merge_round": 19,
+      "compression_gain": 35,
+      "tool_details": [
+        {
+          "name": "pdf-tools-get_pdf_info",
+          "description": "Get basic information about a PDF file including page count.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future u",
+          "params": [
+            "pdf_file_path"
+          ]
+        },
+        {
+          "name": "pdf-tools-read_pdf_pages",
+          "description": "Read content from PDF file for specified page range.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future use.\n    ",
+          "params": [
+            "end_page",
+            "pdf_file_path",
+            "start_page"
+          ]
+        },
+        {
+          "name": "pdf-tools-get_pdf_info",
+          "description": "Get basic information about a PDF file including page count.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future u",
+          "params": [
+            "pdf_file_path"
+          ]
+        },
+        {
+          "name": "pdf-tools-read_pdf_pages",
+          "description": "Read content from PDF file for specified page range.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future use.\n    ",
+          "params": [
+            "end_page",
+            "pdf_file_path",
+            "start_page"
+          ]
+        }
+      ]
+    },
+    "macro_020": {
+      "macro_id": "macro_020",
+      "token": "filesystem-list_allowed_directories[] ⊕ filesystem-list_directory[path]",
+      "atomic_sequence": [
+        "filesystem-list_allowed_directories[]",
+        "filesystem-list_directory[path]"
+      ],
+      "tool_names": [
+        "filesystem-list_allowed_directories",
+        "filesystem-list_directory"
+      ],
+      "length": 2,
+      "original_frequency": 60,
+      "current_frequency": 60,
+      "usage_ratio": 0.005439709882139619,
+      "merge_round": 20,
+      "compression_gain": 60,
+      "tool_details": [
+        {
+          "name": "filesystem-list_allowed_directories",
+          "description": "Returns the list of directories that this server is allowed to access. Use this to understand which directories are available before trying to access files.",
+          "params": []
+        },
+        {
+          "name": "filesystem-list_directory",
+          "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understand",
+          "params": [
+            "path"
+          ]
+        }
+      ]
+    },
+    "macro_021": {
+      "macro_id": "macro_021",
+      "token": "word-add_heading[filename,level,text] ⊕ word-add_paragraph[filename,text] ⊕ word-add_table[cols,data,filename,rows]",
+      "atomic_sequence": [
+        "word-add_heading[filename,level,text]",
+        "word-add_paragraph[filename,text]",
+        "word-add_table[cols,data,filename,rows]"
+      ],
+      "tool_names": [
+        "word-add_heading",
+        "word-add_paragraph",
+        "word-add_table"
+      ],
+      "length": 3,
+      "original_frequency": 51,
+      "current_frequency": 51,
+      "usage_ratio": 0.004623753399818676,
+      "merge_round": 21,
+      "compression_gain": 51,
+      "tool_details": [
+        {
+          "name": "word-add_heading",
+          "description": "Add a heading to a Word document.",
+          "params": [
+            "filename",
+            "level",
+            "text"
+          ]
+        },
+        {
+          "name": "word-add_paragraph",
+          "description": "Add a paragraph to a Word document.",
+          "params": [
+            "filename",
+            "text"
+          ]
+        },
+        {
+          "name": "word-add_table",
+          "description": "Add a table to a Word document.",
+          "params": [
+            "cols",
+            "data",
+            "filename",
+            "rows"
+          ]
+        }
+      ]
+    },
+    "macro_022": {
+      "macro_id": "macro_022",
+      "token": "playwright_with_chunk-browser_navigate[url] ⊕ playwright_with_chunk-browser_snapshot_navigate_to_next_span[]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_navigate[url]",
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span[]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_navigate",
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span"
+      ],
+      "length": 2,
+      "original_frequency": 50,
+      "current_frequency": 50,
+      "usage_ratio": 0.004533091568449683,
+      "merge_round": 22,
+      "compression_gain": 50,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_navigate",
+          "description": "Navigate to a URL",
+          "params": [
+            "url"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_snapshot_navigate_to_next_span",
+          "description": "Navigate to the next span in the current page snapshot. If already at the last span, stays at the last span. Use this for sequential exploration of page content from top to bottom.",
+          "params": []
+        }
+      ]
+    },
+    "macro_023": {
+      "macro_id": "macro_023",
+      "token": "local-web_search[num_results,query] ⊕ fetch-fetch_markdown[url]",
+      "atomic_sequence": [
+        "local-web_search[num_results,query]",
+        "fetch-fetch_markdown[url]"
+      ],
+      "tool_names": [
+        "local-web_search",
+        "fetch-fetch_markdown"
+      ],
+      "length": 2,
+      "original_frequency": 48,
+      "current_frequency": 48,
+      "usage_ratio": 0.004351767905711695,
+      "merge_round": 23,
+      "compression_gain": 48,
+      "tool_details": [
+        {
+          "name": "local-web_search",
+          "description": "Search the web using Google Serper API with concurrency control and retry mechanisms. Supports various Google search operators.",
+          "params": [
+            "num_results",
+            "query"
+          ]
+        },
+        {
+          "name": "fetch-fetch_markdown",
+          "description": "Fetch a website and return the content as Markdown",
+          "params": [
+            "url"
+          ]
+        }
+      ]
+    },
+    "macro_024": {
+      "macro_id": "macro_024",
+      "token": "google_sheet-list_spreadsheets[] ⊕ google_sheet-list_sheets[spreadsheet_id]",
+      "atomic_sequence": [
+        "google_sheet-list_spreadsheets[]",
+        "google_sheet-list_sheets[spreadsheet_id]"
+      ],
+      "tool_names": [
+        "google_sheet-list_spreadsheets",
+        "google_sheet-list_sheets"
+      ],
+      "length": 2,
+      "original_frequency": 48,
+      "current_frequency": 48,
+      "usage_ratio": 0.004351767905711695,
+      "merge_round": 24,
+      "compression_gain": 48,
+      "tool_details": [
+        {
+          "name": "google_sheet-list_spreadsheets",
+          "description": "\n    List all spreadsheets in the configured Google Drive folder.\n    If no folder is configured, lists spreadsheets from 'My Drive'.\n    \n    Returns:\n        List of spreadsheets with their ID and t",
+          "params": []
+        },
+        {
+          "name": "google_sheet-list_sheets",
+          "description": "\n    List all sheets in a Google Spreadsheet.\n    \n    Args:\n        spreadsheet_id: The ID of the spreadsheet (found in the URL)\n    \n    Returns:\n        List of sheet names\n    ",
+          "params": [
+            "spreadsheet_id"
+          ]
+        }
+      ]
+    },
+    "macro_025": {
+      "macro_id": "macro_025",
+      "token": "playwright_with_chunk-browser_snapshot_search[pattern] ⊕ playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_snapshot_search[pattern]",
+        "playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_snapshot_search",
+        "playwright_with_chunk-browser_snapshot_navigate_to_span"
+      ],
+      "length": 2,
+      "original_frequency": 47,
+      "current_frequency": 47,
+      "usage_ratio": 0.004261106074342702,
+      "merge_round": 25,
+      "compression_gain": 47,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_snapshot_search",
+          "description": "Search for a pattern across all spans of the current page snapshot using regular expressions. Returns matches with both global line numbers (across entire snapshot) and in-span line numbers (within ea",
+          "params": [
+            "flags",
+            "pattern"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_snapshot_navigate_to_span",
+          "description": "Navigate to a specific span in the current page snapshot by index. Each span contains a portion of the page content (limited by span size). Use this when you know the exact span number you want to vie",
+          "params": [
+            "spanIndex"
+          ]
+        }
+      ]
+    },
+    "macro_026": {
+      "macro_id": "macro_026",
+      "token": "filesystem-read_file[path] ⊕ terminal-run_command[command]",
+      "atomic_sequence": [
+        "filesystem-read_file[path]",
+        "terminal-run_command[command]"
+      ],
+      "tool_names": [
+        "filesystem-read_file",
+        "terminal-run_command"
+      ],
+      "length": 2,
+      "original_frequency": 46,
+      "current_frequency": 46,
+      "usage_ratio": 0.004170444242973708,
+      "merge_round": 26,
+      "compression_gain": 46,
+      "tool_details": [
+        {
+          "name": "filesystem-read_file",
+          "description": "Read the complete contents of a file from the file system. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the co",
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "terminal-run_command",
+          "description": "Allows command (CLI) execution in the directory: /workspace/dumps/workspace\n\nAvailable commands: clear, ifconfig, cat, stat, helm, sed, rm, zip, diff, chmod, wc, awk, head, realpath, ps, gunzip, curl,",
+          "params": [
+            "command"
+          ]
+        }
+      ]
+    },
+    "macro_027": {
+      "macro_id": "macro_027",
+      "token": "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query] ⊕ excel-write_data_to_excel[data,filepath,sheet_name,start_cell]",
+      "atomic_sequence": [
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+        "local-web_search[num_results,query]",
+        "excel-write_data_to_excel[data,filepath,sheet_name,start_cell]"
+      ],
+      "tool_names": [
+        "pdf-tools-read_pdf_pages",
+        "local-web_search",
+        "excel-write_data_to_excel"
+      ],
+      "length": 3,
+      "original_frequency": 44,
+      "current_frequency": 12,
+      "usage_ratio": 0.0010879419764279238,
+      "merge_round": 27,
+      "compression_gain": 44,
+      "tool_details": [
+        {
+          "name": "pdf-tools-read_pdf_pages",
+          "description": "Read content from PDF file for specified page range.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future use.\n    ",
+          "params": [
+            "end_page",
+            "pdf_file_path",
+            "start_page"
+          ]
+        },
+        {
+          "name": "local-web_search",
+          "description": "Search the web using Google Serper API with concurrency control and retry mechanisms. Supports various Google search operators.",
+          "params": [
+            "num_results",
+            "query"
+          ]
+        },
+        {
+          "name": "excel-write_data_to_excel",
+          "description": "\n    Write data to Excel worksheet.\n    Excel formula will write to cell without any verification.\n\n    PARAMETERS:  \n    filepath: Path to Excel file\n    sheet_name: Name of worksheet to write to\n   ",
+          "params": [
+            "data",
+            "filepath",
+            "sheet_name",
+            "start_cell"
+          ]
+        }
+      ]
+    },
+    "macro_028": {
+      "macro_id": "macro_028",
+      "token": "emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id] ⊕ emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id]",
+      "atomic_sequence": [
+        "emails-read_email[email_id]",
+        "emails-download_attachment[attachment_filename,email_id]",
+        "emails-read_email[email_id]",
+        "emails-download_attachment[attachment_filename,email_id]"
+      ],
+      "tool_names": [
+        "emails-read_email",
+        "emails-download_attachment",
+        "emails-read_email",
+        "emails-download_attachment"
+      ],
+      "length": 4,
+      "original_frequency": 44,
+      "current_frequency": 25,
+      "usage_ratio": 0.0022665457842248413,
+      "merge_round": 28,
+      "compression_gain": 25,
+      "tool_details": [
+        {
+          "name": "emails-read_email",
+          "description": "Read full content of a specific email\n        \n        Args:\n            email_id: Email ID to read\n        ",
+          "params": [
+            "email_id"
+          ]
+        },
+        {
+          "name": "emails-download_attachment",
+          "description": "Download email attachment to configured download path\n        \n        Args:\n            email_id: Email ID containing the attachment\n            attachment_filename: Name of attachment to download\n  ",
+          "params": [
+            "attachment_filename",
+            "email_id"
+          ]
+        },
+        {
+          "name": "emails-read_email",
+          "description": "Read full content of a specific email\n        \n        Args:\n            email_id: Email ID to read\n        ",
+          "params": [
+            "email_id"
+          ]
+        },
+        {
+          "name": "emails-download_attachment",
+          "description": "Download email attachment to configured download path\n        \n        Args:\n            email_id: Email ID containing the attachment\n            attachment_filename: Name of attachment to download\n  ",
+          "params": [
+            "attachment_filename",
+            "email_id"
+          ]
+        }
+      ]
+    },
+    "macro_029": {
+      "macro_id": "macro_029",
+      "token": "canvas-canvas_list_quizzes[course_id] ⊕ canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]",
+      "atomic_sequence": [
+        "canvas-canvas_list_quizzes[course_id]",
+        "canvas-canvas_start_quiz_attempt[course_id,quiz_id]",
+        "canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint]",
+        "canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]"
+      ],
+      "tool_names": [
+        "canvas-canvas_list_quizzes",
+        "canvas-canvas_start_quiz_attempt",
+        "canvas-canvas_list_quiz_questions",
+        "canvas-canvas_submit_quiz_answers"
+      ],
+      "length": 4,
+      "original_frequency": 43,
+      "current_frequency": 43,
+      "usage_ratio": 0.003898458748866727,
+      "merge_round": 29,
+      "compression_gain": 43,
+      "tool_details": [
+        {
+          "name": "canvas-canvas_list_quizzes",
+          "description": "List all quizzes in a course",
+          "params": [
+            "course_id"
+          ]
+        },
+        {
+          "name": "canvas-canvas_start_quiz_attempt",
+          "description": "Start a new quiz attempt. Returns a quiz_submission object with 'id' field (the quiz_submission_id) and 'validation_token' needed for submitting answers. May return 500 error but still create submissi",
+          "params": [
+            "course_id",
+            "quiz_id"
+          ]
+        },
+        {
+          "name": "canvas-canvas_list_quiz_questions",
+          "description": "List all questions in a quiz. Students: First call canvas_start_quiz_attempt to get quiz_submission_id, then use that ID (NOT quiz_id) with use_submission_endpoint=true.",
+          "params": [
+            "course_id",
+            "quiz_id",
+            "quiz_submission_id",
+            "use_submission_endpoint"
+          ]
+        },
+        {
+          "name": "canvas-canvas_submit_quiz_answers",
+          "description": "Submit answers for a quiz attempt. Use the 'id' from canvas_start_quiz_attempt as submission_id, NOT the quiz_id or any other ID.",
+          "params": [
+            "answers",
+            "course_id",
+            "quiz_id",
+            "submission_id",
+            "validation_token"
+          ]
+        }
+      ]
+    },
+    "macro_030": {
+      "macro_id": "macro_030",
+      "token": "local-web_search[num_results,query] ⊕ fetch-fetch_txt[url]",
+      "atomic_sequence": [
+        "local-web_search[num_results,query]",
+        "fetch-fetch_txt[url]"
+      ],
+      "tool_names": [
+        "local-web_search",
+        "fetch-fetch_txt"
+      ],
+      "length": 2,
+      "original_frequency": 42,
+      "current_frequency": 42,
+      "usage_ratio": 0.0038077969174977336,
+      "merge_round": 30,
+      "compression_gain": 42,
+      "tool_details": [
+        {
+          "name": "local-web_search",
+          "description": "Search the web using Google Serper API with concurrency control and retry mechanisms. Supports various Google search operators.",
+          "params": [
+            "num_results",
+            "query"
+          ]
+        },
+        {
+          "name": "fetch-fetch_txt",
+          "description": "Fetch a website, return the content as plain text (no HTML)",
+          "params": [
+            "url"
+          ]
+        }
+      ]
+    },
+    "macro_031": {
+      "macro_id": "macro_031",
+      "token": "filesystem-list_directory[path] ⊕ filesystem-read_file[path] ⊕ pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+      "atomic_sequence": [
+        "filesystem-list_directory[path]",
+        "filesystem-read_file[path]",
+        "pdf-tools-get_pdf_info[pdf_file_path]",
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]"
+      ],
+      "tool_names": [
+        "filesystem-list_directory",
+        "filesystem-read_file",
+        "pdf-tools-get_pdf_info",
+        "pdf-tools-read_pdf_pages"
+      ],
+      "length": 4,
+      "original_frequency": 39,
+      "current_frequency": 39,
+      "usage_ratio": 0.0035358114233907524,
+      "merge_round": 31,
+      "compression_gain": 39,
+      "tool_details": [
+        {
+          "name": "filesystem-list_directory",
+          "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understand",
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "filesystem-read_file",
+          "description": "Read the complete contents of a file from the file system. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the co",
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "pdf-tools-get_pdf_info",
+          "description": "Get basic information about a PDF file including page count.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future u",
+          "params": [
+            "pdf_file_path"
+          ]
+        },
+        {
+          "name": "pdf-tools-read_pdf_pages",
+          "description": "Read content from PDF file for specified page range.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future use.\n    ",
+          "params": [
+            "end_page",
+            "pdf_file_path",
+            "start_page"
+          ]
+        }
+      ]
+    },
+    "macro_032": {
+      "macro_id": "macro_032",
+      "token": "snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema]",
+      "atomic_sequence": [
+        "snowflake-list_schemas[database]",
+        "snowflake-list_tables[database,schema]"
+      ],
+      "tool_names": [
+        "snowflake-list_schemas",
+        "snowflake-list_tables"
+      ],
+      "length": 2,
+      "original_frequency": 38,
+      "current_frequency": 3,
+      "usage_ratio": 0.00027198549410698095,
+      "merge_round": 32,
+      "compression_gain": 38,
+      "tool_details": [
+        {
+          "name": "snowflake-list_schemas",
+          "description": "List all schemas in a database",
+          "params": [
+            "database"
+          ]
+        },
+        {
+          "name": "snowflake-list_tables",
+          "description": "List all tables in a specific database and schema",
+          "params": [
+            "database",
+            "schema"
+          ]
+        }
+      ]
+    },
+    "macro_033": {
+      "macro_id": "macro_033",
+      "token": "emails-send_email[body,subject,to] ⊕ local-claim_done[]",
+      "atomic_sequence": [
+        "emails-send_email[body,subject,to]",
+        "local-claim_done[]"
+      ],
+      "tool_names": [
+        "emails-send_email",
+        "local-claim_done"
+      ],
+      "length": 2,
+      "original_frequency": 38,
+      "current_frequency": 38,
+      "usage_ratio": 0.0034451495920217587,
+      "merge_round": 33,
+      "compression_gain": 38,
+      "tool_details": [
+        {
+          "name": "emails-send_email",
+          "description": "Send an email with optional HTML body, CC, BCC, and attachments\n        \n        Args:\n            to: Recipient email address(es), comma-separated\n            subject: Email subject\n            body:",
+          "params": [
+            "body",
+            "subject",
+            "to"
+          ]
+        },
+        {
+          "name": "local-claim_done",
+          "description": "claim the task is done",
+          "params": []
+        }
+      ]
+    },
+    "macro_034": {
+      "macro_id": "macro_034",
+      "token": "excel-get_workbook_metadata[filepath] ⊕ excel-read_data_from_excel[filepath,sheet_name]",
+      "atomic_sequence": [
+        "excel-get_workbook_metadata[filepath]",
+        "excel-read_data_from_excel[filepath,sheet_name]"
+      ],
+      "tool_names": [
+        "excel-get_workbook_metadata",
+        "excel-read_data_from_excel"
+      ],
+      "length": 2,
+      "original_frequency": 36,
+      "current_frequency": 36,
+      "usage_ratio": 0.0032638259292837716,
+      "merge_round": 34,
+      "compression_gain": 36,
+      "tool_details": [
+        {
+          "name": "excel-get_workbook_metadata",
+          "description": "Get metadata about workbook including sheets, ranges, etc.",
+          "params": [
+            "filepath"
+          ]
+        },
+        {
+          "name": "excel-read_data_from_excel",
+          "description": "\n    Read data from Excel worksheet with cell metadata including validation rules.\n    \n    Args:\n        filepath: Path to Excel file\n        sheet_name: Name of worksheet\n        start_cell: Startin",
+          "params": [
+            "filepath",
+            "sheet_name"
+          ]
+        }
+      ]
+    },
+    "macro_035": {
+      "macro_id": "macro_035",
+      "token": "snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema] ⊕ snowflake-describe_table[table_name]",
+      "atomic_sequence": [
+        "snowflake-list_schemas[database]",
+        "snowflake-list_tables[database,schema]",
+        "snowflake-describe_table[table_name]"
+      ],
+      "tool_names": [
+        "snowflake-list_schemas",
+        "snowflake-list_tables",
+        "snowflake-describe_table"
+      ],
+      "length": 3,
+      "original_frequency": 35,
+      "current_frequency": 5,
+      "usage_ratio": 0.00045330915684496827,
+      "merge_round": 35,
+      "compression_gain": 35,
+      "tool_details": [
+        {
+          "name": "snowflake-list_schemas",
+          "description": "List all schemas in a database",
+          "params": [
+            "database"
+          ]
+        },
+        {
+          "name": "snowflake-list_tables",
+          "description": "List all tables in a specific database and schema",
+          "params": [
+            "database",
+            "schema"
+          ]
+        },
+        {
+          "name": "snowflake-describe_table",
+          "description": "Get the schema information for a specific table",
+          "params": [
+            "table_name"
+          ]
+        }
+      ]
+    },
+    "macro_036": {
+      "macro_id": "macro_036",
+      "token": "playwright_with_chunk-browser_snapshot_search[flags,pattern] ⊕ playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_snapshot_search[flags,pattern]",
+        "playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_snapshot_search",
+        "playwright_with_chunk-browser_snapshot_navigate_to_span"
+      ],
+      "length": 2,
+      "original_frequency": 34,
+      "current_frequency": 34,
+      "usage_ratio": 0.003082502266545784,
+      "merge_round": 36,
+      "compression_gain": 34,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_snapshot_search",
+          "description": "Search for a pattern across all spans of the current page snapshot using regular expressions. Returns matches with both global line numbers (across entire snapshot) and in-span line numbers (within ea",
+          "params": [
+            "flags",
+            "pattern"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_snapshot_navigate_to_span",
+          "description": "Navigate to a specific span in the current page snapshot by index. Each span contains a portion of the page content (limited by span size). Use this when you know the exact span number you want to vie",
+          "params": [
+            "spanIndex"
+          ]
+        }
+      ]
+    },
+    "macro_037": {
+      "macro_id": "macro_037",
+      "token": "local-python-execute[code] ⊕ google_sheet-update_cells[data,range,sheet,spreadsheet_id]",
+      "atomic_sequence": [
+        "local-python-execute[code]",
+        "google_sheet-update_cells[data,range,sheet,spreadsheet_id]"
+      ],
+      "tool_names": [
+        "local-python-execute",
+        "google_sheet-update_cells"
+      ],
+      "length": 2,
+      "original_frequency": 32,
+      "current_frequency": 32,
+      "usage_ratio": 0.002901178603807797,
+      "merge_round": 37,
+      "compression_gain": 32,
+      "tool_details": [
+        {
+          "name": "local-python-execute",
+          "description": "Execute Python code directly under the agent workspace, and returns stdout, stderr, return code, and execution time in a structured format.",
+          "params": [
+            "code"
+          ]
+        },
+        {
+          "name": "google_sheet-update_cells",
+          "description": "\n    Update cells in a Google Spreadsheet.\n    \n    Args:\n        spreadsheet_id: The ID of the spreadsheet (found in the URL)\n        sheet: The name of the sheet\n        range: Cell range in A1 nota",
+          "params": [
+            "data",
+            "range",
+            "sheet",
+            "spreadsheet_id"
+          ]
+        }
+      ]
+    },
+    "macro_038": {
+      "macro_id": "macro_038",
+      "token": "local-web_search[num_results,query] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query] ⊕ excel-write_data_to_excel[data,filepath,sheet_name,start_cell]",
+      "atomic_sequence": [
+        "local-web_search[num_results,query]",
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+        "local-web_search[num_results,query]",
+        "excel-write_data_to_excel[data,filepath,sheet_name,start_cell]"
+      ],
+      "tool_names": [
+        "local-web_search",
+        "pdf-tools-read_pdf_pages",
+        "local-web_search",
+        "excel-write_data_to_excel"
+      ],
+      "length": 4,
+      "original_frequency": 32,
+      "current_frequency": 32,
+      "usage_ratio": 0.002901178603807797,
+      "merge_round": 38,
+      "compression_gain": 32,
+      "tool_details": [
+        {
+          "name": "local-web_search",
+          "description": "Search the web using Google Serper API with concurrency control and retry mechanisms. Supports various Google search operators.",
+          "params": [
+            "num_results",
+            "query"
+          ]
+        },
+        {
+          "name": "pdf-tools-read_pdf_pages",
+          "description": "Read content from PDF file for specified page range.\n    \n    Supports both local file paths and URLs. For URLs, the PDF will be downloaded\n    to a temporary directory and cached for future use.\n    ",
+          "params": [
+            "end_page",
+            "pdf_file_path",
+            "start_page"
+          ]
+        },
+        {
+          "name": "local-web_search",
+          "description": "Search the web using Google Serper API with concurrency control and retry mechanisms. Supports various Google search operators.",
+          "params": [
+            "num_results",
+            "query"
+          ]
+        },
+        {
+          "name": "excel-write_data_to_excel",
+          "description": "\n    Write data to Excel worksheet.\n    Excel formula will write to cell without any verification.\n\n    PARAMETERS:  \n    filepath: Path to Excel file\n    sheet_name: Name of worksheet to write to\n   ",
+          "params": [
+            "data",
+            "filepath",
+            "sheet_name",
+            "start_cell"
+          ]
+        }
+      ]
+    },
+    "macro_039": {
+      "macro_id": "macro_039",
+      "token": "google_forms-add_text_question[formId,questionTitle,required] ⊕ google_forms-add_multiple_choice_question[formId,options,questionTitle,required]",
+      "atomic_sequence": [
+        "google_forms-add_text_question[formId,questionTitle,required]",
+        "google_forms-add_multiple_choice_question[formId,options,questionTitle,required]"
+      ],
+      "tool_names": [
+        "google_forms-add_text_question",
+        "google_forms-add_multiple_choice_question"
+      ],
+      "length": 2,
+      "original_frequency": 32,
+      "current_frequency": 32,
+      "usage_ratio": 0.002901178603807797,
+      "merge_round": 39,
+      "compression_gain": 32,
+      "tool_details": [
+        {
+          "name": "google_forms-add_text_question",
+          "description": "Add a text question to the form",
+          "params": [
+            "formId",
+            "questionTitle",
+            "required"
+          ]
+        },
+        {
+          "name": "google_forms-add_multiple_choice_question",
+          "description": "Add a multiple choice question to the form",
+          "params": [
+            "formId",
+            "options",
+            "questionTitle",
+            "required"
+          ]
+        }
+      ]
+    },
+    "macro_040": {
+      "macro_id": "macro_040",
+      "token": "word-format_text[bold,end_pos,filename,font_name,font_size,paragraph_index,start_pos] ⊕ word-format_text[bold,end_pos,filename,paragraph_index,start_pos]",
+      "atomic_sequence": [
+        "word-format_text[bold,end_pos,filename,font_name,font_size,paragraph_index,start_pos]",
+        "word-format_text[bold,end_pos,filename,paragraph_index,start_pos]"
+      ],
+      "tool_names": [
+        "word-format_text",
+        "word-format_text"
+      ],
+      "length": 2,
+      "original_frequency": 31,
+      "current_frequency": 31,
+      "usage_ratio": 0.0028105167724388033,
+      "merge_round": 40,
+      "compression_gain": 31,
+      "tool_details": [
+        {
+          "name": "word-format_text",
+          "description": "Format a specific range of text within a paragraph.",
+          "params": [
+            "bold",
+            "end_pos",
+            "filename",
+            "paragraph_index",
+            "start_pos"
+          ]
+        },
+        {
+          "name": "word-format_text",
+          "description": "Format a specific range of text within a paragraph.",
+          "params": [
+            "bold",
+            "end_pos",
+            "filename",
+            "paragraph_index",
+            "start_pos"
+          ]
+        }
+      ]
+    },
+    "macro_041": {
+      "macro_id": "macro_041",
+      "token": "snowflake-list_databases[] ⊕ snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema] ⊕ snowflake-describe_table[table_name]",
+      "atomic_sequence": [
+        "snowflake-list_databases[]",
+        "snowflake-list_schemas[database]",
+        "snowflake-list_tables[database,schema]",
+        "snowflake-describe_table[table_name]"
+      ],
+      "tool_names": [
+        "snowflake-list_databases",
+        "snowflake-list_schemas",
+        "snowflake-list_tables",
+        "snowflake-describe_table"
+      ],
+      "length": 4,
+      "original_frequency": 30,
+      "current_frequency": 30,
+      "usage_ratio": 0.0027198549410698096,
+      "merge_round": 41,
+      "compression_gain": 30,
+      "tool_details": [
+        {
+          "name": "snowflake-list_databases",
+          "description": "List all available databases in Snowflake",
+          "params": []
+        },
+        {
+          "name": "snowflake-list_schemas",
+          "description": "List all schemas in a database",
+          "params": [
+            "database"
+          ]
+        },
+        {
+          "name": "snowflake-list_tables",
+          "description": "List all tables in a specific database and schema",
+          "params": [
+            "database",
+            "schema"
+          ]
+        },
+        {
+          "name": "snowflake-describe_table",
+          "description": "Get the schema information for a specific table",
+          "params": [
+            "table_name"
+          ]
+        }
+      ]
+    },
+    "macro_042": {
+      "macro_id": "macro_042",
+      "token": "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref] ⊕ playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref] ⊕ playwright_with_chunk-browser_snapshot_navigate_to_next_span[] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_type[element,ref,text]",
+        "playwright_with_chunk-browser_click[element,ref]",
+        "playwright_with_chunk-browser_type[element,ref,text]",
+        "playwright_with_chunk-browser_click[element,ref]",
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span[]",
+        "playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_type",
+        "playwright_with_chunk-browser_click",
+        "playwright_with_chunk-browser_type",
+        "playwright_with_chunk-browser_click",
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span",
+        "playwright_with_chunk-browser_click"
+      ],
+      "length": 6,
+      "original_frequency": 30,
+      "current_frequency": 30,
+      "usage_ratio": 0.0027198549410698096,
+      "merge_round": 42,
+      "compression_gain": 30,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_type",
+          "description": "Type text into editable element",
+          "params": [
+            "element",
+            "ref",
+            "text"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_type",
+          "description": "Type text into editable element",
+          "params": [
+            "element",
+            "ref",
+            "text"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_snapshot_navigate_to_next_span",
+          "description": "Navigate to the next span in the current page snapshot. If already at the last span, stays at the last span. Use this for sequential exploration of page content from top to bottom.",
+          "params": []
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        }
+      ]
+    },
+    "macro_043": {
+      "macro_id": "macro_043",
+      "token": "playwright_with_chunk-browser_navigate[url] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_navigate[url]",
+        "playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_navigate",
+        "playwright_with_chunk-browser_click"
+      ],
+      "length": 2,
+      "original_frequency": 30,
+      "current_frequency": 30,
+      "usage_ratio": 0.0027198549410698096,
+      "merge_round": 43,
+      "compression_gain": 30,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_navigate",
+          "description": "Navigate to a URL",
+          "params": [
+            "url"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        }
+      ]
+    },
+    "macro_044": {
+      "macro_id": "macro_044",
+      "token": "playwright_with_chunk-browser_type[element,ref,slowly,submit,text] ⊕ playwright_with_chunk-browser_click[button,doubleClick,element,ref]",
+      "atomic_sequence": [
+        "playwright_with_chunk-browser_type[element,ref,slowly,submit,text]",
+        "playwright_with_chunk-browser_click[button,doubleClick,element,ref]"
+      ],
+      "tool_names": [
+        "playwright_with_chunk-browser_type",
+        "playwright_with_chunk-browser_click"
+      ],
+      "length": 2,
+      "original_frequency": 30,
+      "current_frequency": 30,
+      "usage_ratio": 0.0027198549410698096,
+      "merge_round": 44,
+      "compression_gain": 30,
+      "tool_details": [
+        {
+          "name": "playwright_with_chunk-browser_type",
+          "description": "Type text into editable element",
+          "params": [
+            "element",
+            "ref",
+            "text"
+          ]
+        },
+        {
+          "name": "playwright_with_chunk-browser_click",
+          "description": "Perform click on a web page",
+          "params": [
+            "element",
+            "ref"
+          ]
+        }
+      ]
+    },
+    "macro_045": {
+      "macro_id": "macro_045",
+      "token": "filesystem-write_file[content,path] ⊕ terminal-run_command[command] ⊕ filesystem-write_file[content,path] ⊕ terminal-run_command[command]",
+      "atomic_sequence": [
+        "filesystem-write_file[content,path]",
+        "terminal-run_command[command]",
+        "filesystem-write_file[content,path]",
+        "terminal-run_command[command]"
+      ],
+      "tool_names": [
+        "filesystem-write_file",
+        "terminal-run_command",
+        "filesystem-write_file",
+        "terminal-run_command"
+      ],
+      "length": 4,
+      "original_frequency": 29,
+      "current_frequency": 21,
+      "usage_ratio": 0.0019038984587488668,
+      "merge_round": 45,
+      "compression_gain": 21,
+      "tool_details": [
+        {
+          "name": "filesystem-write_file",
+          "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works",
+          "params": [
+            "content",
+            "path"
+          ]
+        },
+        {
+          "name": "terminal-run_command",
+          "description": "Allows command (CLI) execution in the directory: /workspace/dumps/workspace\n\nAvailable commands: clear, ifconfig, cat, stat, helm, sed, rm, zip, diff, chmod, wc, awk, head, realpath, ps, gunzip, curl,",
+          "params": [
+            "command"
+          ]
+        },
+        {
+          "name": "filesystem-write_file",
+          "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works",
+          "params": [
+            "content",
+            "path"
+          ]
+        },
+        {
+          "name": "terminal-run_command",
+          "description": "Allows command (CLI) execution in the directory: /workspace/dumps/workspace\n\nAvailable commands: clear, ifconfig, cat, stat, helm, sed, rm, zip, diff, chmod, wc, awk, head, realpath, ps, gunzip, curl,",
+          "params": [
+            "command"
+          ]
+        }
+      ]
+    },
+    "macro_046": {
+      "macro_id": "macro_046",
+      "token": "canvas-canvas_health_check[] ⊕ canvas-canvas_list_courses[]",
+      "atomic_sequence": [
+        "canvas-canvas_health_check[]",
+        "canvas-canvas_list_courses[]"
+      ],
+      "tool_names": [
+        "canvas-canvas_health_check",
+        "canvas-canvas_list_courses"
+      ],
+      "length": 2,
+      "original_frequency": 29,
+      "current_frequency": 29,
+      "usage_ratio": 0.002629193109700816,
+      "merge_round": 46,
+      "compression_gain": 29,
+      "tool_details": [
+        {
+          "name": "canvas-canvas_health_check",
+          "description": "Check the health and connectivity of the Canvas API",
+          "params": []
+        },
+        {
+          "name": "canvas-canvas_list_courses",
+          "description": "List all courses for the current user",
+          "params": [
+            "include_ended"
+          ]
+        }
+      ]
+    },
+    "macro_047": {
+      "macro_id": "macro_047",
+      "token": "filesystem-write_file[content,path] ⊕ filesystem-read_file[path]",
+      "atomic_sequence": [
+        "filesystem-write_file[content,path]",
+        "filesystem-read_file[path]"
+      ],
+      "tool_names": [
+        "filesystem-write_file",
+        "filesystem-read_file"
+      ],
+      "length": 2,
+      "original_frequency": 29,
+      "current_frequency": 29,
+      "usage_ratio": 0.002629193109700816,
+      "merge_round": 47,
+      "compression_gain": 29,
+      "tool_details": [
+        {
+          "name": "filesystem-write_file",
+          "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works",
+          "params": [
+            "content",
+            "path"
+          ]
+        },
+        {
+          "name": "filesystem-read_file",
+          "description": "Read the complete contents of a file from the file system. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the co",
+          "params": [
+            "path"
+          ]
+        }
+      ]
+    },
+    "macro_048": {
+      "macro_id": "macro_048",
+      "token": "filesystem-list_allowed_directories[] ⊕ filesystem-directory_tree[path]",
+      "atomic_sequence": [
+        "filesystem-list_allowed_directories[]",
+        "filesystem-directory_tree[path]"
+      ],
+      "tool_names": [
+        "filesystem-list_allowed_directories",
+        "filesystem-directory_tree"
+      ],
+      "length": 2,
+      "original_frequency": 28,
+      "current_frequency": 28,
+      "usage_ratio": 0.002538531278331822,
+      "merge_round": 48,
+      "compression_gain": 28,
+      "tool_details": [
+        {
+          "name": "filesystem-list_allowed_directories",
+          "description": "Returns the list of directories that this server is allowed to access. Use this to understand which directories are available before trying to access files.",
+          "params": []
+        },
+        {
+          "name": "filesystem-directory_tree",
+          "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directo",
+          "params": [
+            "path"
+          ]
+        }
+      ]
+    },
+    "macro_049": {
+      "macro_id": "macro_049",
+      "token": "filesystem-list_allowed_directories[] ⊕ filesystem-list_directory[path] ⊕ filesystem-read_file[path]",
+      "atomic_sequence": [
+        "filesystem-list_allowed_directories[]",
+        "filesystem-list_directory[path]",
+        "filesystem-read_file[path]"
+      ],
+      "tool_names": [
+        "filesystem-list_allowed_directories",
+        "filesystem-list_directory",
+        "filesystem-read_file"
+      ],
+      "length": 3,
+      "original_frequency": 28,
+      "current_frequency": 28,
+      "usage_ratio": 0.002538531278331822,
+      "merge_round": 49,
+      "compression_gain": 28,
+      "tool_details": [
+        {
+          "name": "filesystem-list_allowed_directories",
+          "description": "Returns the list of directories that this server is allowed to access. Use this to understand which directories are available before trying to access files.",
+          "params": []
+        },
+        {
+          "name": "filesystem-list_directory",
+          "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understand",
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "filesystem-read_file",
+          "description": "Read the complete contents of a file from the file system. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the co",
+          "params": [
+            "path"
+          ]
+        }
+      ]
+    }
+  },
+  "merge_history": [
+    {
+      "pair": [
+        "pdf-tools-get_pdf_info[pdf_file_path]",
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]"
+      ],
+      "new_token": "pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+      "frequency": 206,
+      "round": 0,
+      "length": 2,
+      "compression_gain": 206
+    },
+    {
+      "pair": [
+        "canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint]",
+        "canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]"
+      ],
+      "new_token": "canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]",
+      "frequency": 184,
+      "round": 1,
+      "length": 2,
+      "compression_gain": 184
+    },
+    {
+      "pair": [
+        "canvas-canvas_start_quiz_attempt[course_id,quiz_id]",
+        "canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]"
+      ],
+      "new_token": "canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]",
+      "frequency": 183,
+      "round": 2,
+      "length": 3,
+      "compression_gain": 183
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_type[element,ref,text]",
+        "playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "new_token": "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "frequency": 164,
+      "round": 3,
+      "length": 2,
+      "compression_gain": 164
+    },
+    {
+      "pair": [
+        "filesystem-list_directory[path]",
+        "filesystem-read_file[path]"
+      ],
+      "new_token": "filesystem-list_directory[path] ⊕ filesystem-read_file[path]",
+      "frequency": 161,
+      "round": 4,
+      "length": 2,
+      "compression_gain": 161
+    },
+    {
+      "pair": [
+        "filesystem-write_file[content,path]",
+        "local-claim_done[]"
+      ],
+      "new_token": "filesystem-write_file[content,path] ⊕ local-claim_done[]",
+      "frequency": 138,
+      "round": 5,
+      "length": 2,
+      "compression_gain": 138
+    },
+    {
+      "pair": [
+        "canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]",
+        "canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]"
+      ],
+      "new_token": "canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token] ⊕ canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]",
+      "frequency": 129,
+      "round": 6,
+      "length": 6,
+      "compression_gain": 69
+    },
+    {
+      "pair": [
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+        "local-web_search[num_results,query]"
+      ],
+      "new_token": "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query]",
+      "frequency": 95,
+      "round": 7,
+      "length": 2,
+      "compression_gain": 95
+    },
+    {
+      "pair": [
+        "filesystem-list_directory[path]",
+        "filesystem-read_file[head,path,tail]"
+      ],
+      "new_token": "filesystem-list_directory[path] ⊕ filesystem-read_file[head,path,tail]",
+      "frequency": 80,
+      "round": 8,
+      "length": 2,
+      "compression_gain": 80
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span[]",
+        "playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "new_token": "playwright_with_chunk-browser_snapshot_navigate_to_next_span[] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "frequency": 80,
+      "round": 9,
+      "length": 2,
+      "compression_gain": 80
+    },
+    {
+      "pair": [
+        "emails-read_email[email_id]",
+        "emails-download_attachment[attachment_filename,email_id]"
+      ],
+      "new_token": "emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id]",
+      "frequency": 79,
+      "round": 10,
+      "length": 2,
+      "compression_gain": 79
+    },
+    {
+      "pair": [
+        "filesystem-write_file[content,path]",
+        "terminal-run_command[command]"
+      ],
+      "new_token": "filesystem-write_file[content,path] ⊕ terminal-run_command[command]",
+      "frequency": 78,
+      "round": 11,
+      "length": 2,
+      "compression_gain": 78
+    },
+    {
+      "pair": [
+        "word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index]",
+        "word-set_table_alignment_all[filename,horizontal,table_index,vertical]"
+      ],
+      "new_token": "word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index] ⊕ word-set_table_alignment_all[filename,horizontal,table_index,vertical]",
+      "frequency": 78,
+      "round": 12,
+      "length": 2,
+      "compression_gain": 78
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref]",
+        "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "new_token": "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref] ⊕ playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "frequency": 74,
+      "round": 13,
+      "length": 4,
+      "compression_gain": 54
+    },
+    {
+      "pair": [
+        "excel-get_workbook_metadata[filepath,include_ranges]",
+        "excel-read_data_from_excel[end_cell,filepath,preview_only,sheet_name,start_cell]"
+      ],
+      "new_token": "excel-get_workbook_metadata[filepath,include_ranges] ⊕ excel-read_data_from_excel[end_cell,filepath,preview_only,sheet_name,start_cell]",
+      "frequency": 66,
+      "round": 14,
+      "length": 2,
+      "compression_gain": 66
+    },
+    {
+      "pair": [
+        "local-python-execute[code]",
+        "local-claim_done[]"
+      ],
+      "new_token": "local-python-execute[code] ⊕ local-claim_done[]",
+      "frequency": 66,
+      "round": 15,
+      "length": 2,
+      "compression_gain": 66
+    },
+    {
+      "pair": [
+        "word-add_heading[filename,level,text]",
+        "word-add_paragraph[filename,text]"
+      ],
+      "new_token": "word-add_heading[filename,level,text] ⊕ word-add_paragraph[filename,text]",
+      "frequency": 66,
+      "round": 16,
+      "length": 2,
+      "compression_gain": 66
+    },
+    {
+      "pair": [
+        "word-highlight_table_header[filename,header_color,table_index,text_color]",
+        "word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index] ⊕ word-set_table_alignment_all[filename,horizontal,table_index,vertical]"
+      ],
+      "new_token": "word-highlight_table_header[filename,header_color,table_index,text_color] ⊕ word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index] ⊕ word-set_table_alignment_all[filename,horizontal,table_index,vertical]",
+      "frequency": 65,
+      "round": 17,
+      "length": 3,
+      "compression_gain": 65
+    },
+    {
+      "pair": [
+        "local-web_search[num_results,query]",
+        "fetch-fetch_html[url]"
+      ],
+      "new_token": "local-web_search[num_results,query] ⊕ fetch-fetch_html[url]",
+      "frequency": 62,
+      "round": 18,
+      "length": 2,
+      "compression_gain": 62
+    },
+    {
+      "pair": [
+        "pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+        "pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]"
+      ],
+      "new_token": "pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+      "frequency": 61,
+      "round": 19,
+      "length": 4,
+      "compression_gain": 35
+    },
+    {
+      "pair": [
+        "filesystem-list_allowed_directories[]",
+        "filesystem-list_directory[path]"
+      ],
+      "new_token": "filesystem-list_allowed_directories[] ⊕ filesystem-list_directory[path]",
+      "frequency": 60,
+      "round": 20,
+      "length": 2,
+      "compression_gain": 60
+    },
+    {
+      "pair": [
+        "word-add_heading[filename,level,text] ⊕ word-add_paragraph[filename,text]",
+        "word-add_table[cols,data,filename,rows]"
+      ],
+      "new_token": "word-add_heading[filename,level,text] ⊕ word-add_paragraph[filename,text] ⊕ word-add_table[cols,data,filename,rows]",
+      "frequency": 51,
+      "round": 21,
+      "length": 3,
+      "compression_gain": 51
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_navigate[url]",
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span[]"
+      ],
+      "new_token": "playwright_with_chunk-browser_navigate[url] ⊕ playwright_with_chunk-browser_snapshot_navigate_to_next_span[]",
+      "frequency": 50,
+      "round": 22,
+      "length": 2,
+      "compression_gain": 50
+    },
+    {
+      "pair": [
+        "local-web_search[num_results,query]",
+        "fetch-fetch_markdown[url]"
+      ],
+      "new_token": "local-web_search[num_results,query] ⊕ fetch-fetch_markdown[url]",
+      "frequency": 48,
+      "round": 23,
+      "length": 2,
+      "compression_gain": 48
+    },
+    {
+      "pair": [
+        "google_sheet-list_spreadsheets[]",
+        "google_sheet-list_sheets[spreadsheet_id]"
+      ],
+      "new_token": "google_sheet-list_spreadsheets[] ⊕ google_sheet-list_sheets[spreadsheet_id]",
+      "frequency": 48,
+      "round": 24,
+      "length": 2,
+      "compression_gain": 48
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_snapshot_search[pattern]",
+        "playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]"
+      ],
+      "new_token": "playwright_with_chunk-browser_snapshot_search[pattern] ⊕ playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]",
+      "frequency": 47,
+      "round": 25,
+      "length": 2,
+      "compression_gain": 47
+    },
+    {
+      "pair": [
+        "filesystem-read_file[path]",
+        "terminal-run_command[command]"
+      ],
+      "new_token": "filesystem-read_file[path] ⊕ terminal-run_command[command]",
+      "frequency": 46,
+      "round": 26,
+      "length": 2,
+      "compression_gain": 46
+    },
+    {
+      "pair": [
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query]",
+        "excel-write_data_to_excel[data,filepath,sheet_name,start_cell]"
+      ],
+      "new_token": "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query] ⊕ excel-write_data_to_excel[data,filepath,sheet_name,start_cell]",
+      "frequency": 44,
+      "round": 27,
+      "length": 3,
+      "compression_gain": 44
+    },
+    {
+      "pair": [
+        "emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id]",
+        "emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id]"
+      ],
+      "new_token": "emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id] ⊕ emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id]",
+      "frequency": 44,
+      "round": 28,
+      "length": 4,
+      "compression_gain": 25
+    },
+    {
+      "pair": [
+        "canvas-canvas_list_quizzes[course_id]",
+        "canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]"
+      ],
+      "new_token": "canvas-canvas_list_quizzes[course_id] ⊕ canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]",
+      "frequency": 43,
+      "round": 29,
+      "length": 4,
+      "compression_gain": 43
+    },
+    {
+      "pair": [
+        "local-web_search[num_results,query]",
+        "fetch-fetch_txt[url]"
+      ],
+      "new_token": "local-web_search[num_results,query] ⊕ fetch-fetch_txt[url]",
+      "frequency": 42,
+      "round": 30,
+      "length": 2,
+      "compression_gain": 42
+    },
+    {
+      "pair": [
+        "filesystem-list_directory[path] ⊕ filesystem-read_file[path]",
+        "pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]"
+      ],
+      "new_token": "filesystem-list_directory[path] ⊕ filesystem-read_file[path] ⊕ pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]",
+      "frequency": 39,
+      "round": 31,
+      "length": 4,
+      "compression_gain": 39
+    },
+    {
+      "pair": [
+        "snowflake-list_schemas[database]",
+        "snowflake-list_tables[database,schema]"
+      ],
+      "new_token": "snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema]",
+      "frequency": 38,
+      "round": 32,
+      "length": 2,
+      "compression_gain": 38
+    },
+    {
+      "pair": [
+        "emails-send_email[body,subject,to]",
+        "local-claim_done[]"
+      ],
+      "new_token": "emails-send_email[body,subject,to] ⊕ local-claim_done[]",
+      "frequency": 38,
+      "round": 33,
+      "length": 2,
+      "compression_gain": 38
+    },
+    {
+      "pair": [
+        "excel-get_workbook_metadata[filepath]",
+        "excel-read_data_from_excel[filepath,sheet_name]"
+      ],
+      "new_token": "excel-get_workbook_metadata[filepath] ⊕ excel-read_data_from_excel[filepath,sheet_name]",
+      "frequency": 36,
+      "round": 34,
+      "length": 2,
+      "compression_gain": 36
+    },
+    {
+      "pair": [
+        "snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema]",
+        "snowflake-describe_table[table_name]"
+      ],
+      "new_token": "snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema] ⊕ snowflake-describe_table[table_name]",
+      "frequency": 35,
+      "round": 35,
+      "length": 3,
+      "compression_gain": 35
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_snapshot_search[flags,pattern]",
+        "playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]"
+      ],
+      "new_token": "playwright_with_chunk-browser_snapshot_search[flags,pattern] ⊕ playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]",
+      "frequency": 34,
+      "round": 36,
+      "length": 2,
+      "compression_gain": 34
+    },
+    {
+      "pair": [
+        "local-python-execute[code]",
+        "google_sheet-update_cells[data,range,sheet,spreadsheet_id]"
+      ],
+      "new_token": "local-python-execute[code] ⊕ google_sheet-update_cells[data,range,sheet,spreadsheet_id]",
+      "frequency": 32,
+      "round": 37,
+      "length": 2,
+      "compression_gain": 32
+    },
+    {
+      "pair": [
+        "local-web_search[num_results,query]",
+        "pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query] ⊕ excel-write_data_to_excel[data,filepath,sheet_name,start_cell]"
+      ],
+      "new_token": "local-web_search[num_results,query] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query] ⊕ excel-write_data_to_excel[data,filepath,sheet_name,start_cell]",
+      "frequency": 32,
+      "round": 38,
+      "length": 4,
+      "compression_gain": 32
+    },
+    {
+      "pair": [
+        "google_forms-add_text_question[formId,questionTitle,required]",
+        "google_forms-add_multiple_choice_question[formId,options,questionTitle,required]"
+      ],
+      "new_token": "google_forms-add_text_question[formId,questionTitle,required] ⊕ google_forms-add_multiple_choice_question[formId,options,questionTitle,required]",
+      "frequency": 32,
+      "round": 39,
+      "length": 2,
+      "compression_gain": 32
+    },
+    {
+      "pair": [
+        "word-format_text[bold,end_pos,filename,font_name,font_size,paragraph_index,start_pos]",
+        "word-format_text[bold,end_pos,filename,paragraph_index,start_pos]"
+      ],
+      "new_token": "word-format_text[bold,end_pos,filename,font_name,font_size,paragraph_index,start_pos] ⊕ word-format_text[bold,end_pos,filename,paragraph_index,start_pos]",
+      "frequency": 31,
+      "round": 40,
+      "length": 2,
+      "compression_gain": 31
+    },
+    {
+      "pair": [
+        "snowflake-list_databases[]",
+        "snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema] ⊕ snowflake-describe_table[table_name]"
+      ],
+      "new_token": "snowflake-list_databases[] ⊕ snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema] ⊕ snowflake-describe_table[table_name]",
+      "frequency": 30,
+      "round": 41,
+      "length": 4,
+      "compression_gain": 30
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref] ⊕ playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref]",
+        "playwright_with_chunk-browser_snapshot_navigate_to_next_span[] ⊕ playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "new_token": "playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref] ⊕ playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref] ⊕ playwright_with_chunk-browser_snapshot_navigate_to_next_span[] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "frequency": 30,
+      "round": 42,
+      "length": 6,
+      "compression_gain": 30
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_navigate[url]",
+        "playwright_with_chunk-browser_click[element,ref]"
+      ],
+      "new_token": "playwright_with_chunk-browser_navigate[url] ⊕ playwright_with_chunk-browser_click[element,ref]",
+      "frequency": 30,
+      "round": 43,
+      "length": 2,
+      "compression_gain": 30
+    },
+    {
+      "pair": [
+        "playwright_with_chunk-browser_type[element,ref,slowly,submit,text]",
+        "playwright_with_chunk-browser_click[button,doubleClick,element,ref]"
+      ],
+      "new_token": "playwright_with_chunk-browser_type[element,ref,slowly,submit,text] ⊕ playwright_with_chunk-browser_click[button,doubleClick,element,ref]",
+      "frequency": 30,
+      "round": 44,
+      "length": 2,
+      "compression_gain": 30
+    },
+    {
+      "pair": [
+        "filesystem-write_file[content,path] ⊕ terminal-run_command[command]",
+        "filesystem-write_file[content,path] ⊕ terminal-run_command[command]"
+      ],
+      "new_token": "filesystem-write_file[content,path] ⊕ terminal-run_command[command] ⊕ filesystem-write_file[content,path] ⊕ terminal-run_command[command]",
+      "frequency": 29,
+      "round": 45,
+      "length": 4,
+      "compression_gain": 21
+    },
+    {
+      "pair": [
+        "canvas-canvas_health_check[]",
+        "canvas-canvas_list_courses[]"
+      ],
+      "new_token": "canvas-canvas_health_check[] ⊕ canvas-canvas_list_courses[]",
+      "frequency": 29,
+      "round": 46,
+      "length": 2,
+      "compression_gain": 29
+    },
+    {
+      "pair": [
+        "filesystem-write_file[content,path]",
+        "filesystem-read_file[path]"
+      ],
+      "new_token": "filesystem-write_file[content,path] ⊕ filesystem-read_file[path]",
+      "frequency": 29,
+      "round": 47,
+      "length": 2,
+      "compression_gain": 29
+    },
+    {
+      "pair": [
+        "filesystem-list_allowed_directories[]",
+        "filesystem-directory_tree[path]"
+      ],
+      "new_token": "filesystem-list_allowed_directories[] ⊕ filesystem-directory_tree[path]",
+      "frequency": 28,
+      "round": 48,
+      "length": 2,
+      "compression_gain": 28
+    },
+    {
+      "pair": [
+        "filesystem-list_allowed_directories[]",
+        "filesystem-list_directory[path] ⊕ filesystem-read_file[path]"
+      ],
+      "new_token": "filesystem-list_allowed_directories[] ⊕ filesystem-list_directory[path] ⊕ filesystem-read_file[path]",
+      "frequency": 28,
+      "round": 49,
+      "length": 3,
+      "compression_gain": 28
+    }
+  ]
+}

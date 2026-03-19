@@ -1,0 +1,752 @@
+2026-03-13 03:37:29,776 [INFO] Running steps: [1, 2, 3, 4, 5] with model: qwen2.5-1.5b
+2026-03-13 03:37:29,777 [INFO] 
+======================================================================
+Step 1
+======================================================================
+2026-03-13 03:37:30,395 [INFO] Loaded 1151 sequences from 5628 episodes (success_only=True)
+2026-03-13 03:37:30,407 [INFO] Atomic vocabulary size: 531
+2026-03-13 03:37:30,407 [INFO] Corpus size: 1151 sequences, 14145 total tokens
+2026-03-13 03:37:30,424 [INFO] Round   0: merge (pdf-tools-get_pdf_info[pdf_file_path], pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]) freq=206, len=2, gain=206
+2026-03-13 03:37:30,428 [INFO] Round   1: merge (canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint], canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]) freq=184, len=2, gain=184
+2026-03-13 03:37:30,432 [INFO] Round   2: merge (canvas-canvas_start_quiz_attempt[course_id,quiz_id], canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]) freq=183, len=3, gain=183
+2026-03-13 03:37:30,436 [INFO] Round   3: merge (playwright_with_chunk-browser_type[element,ref,text], playwright_with_chunk-browser_click[element,ref]) freq=164, len=2, gain=164
+2026-03-13 03:37:30,440 [INFO] Round   4: merge (filesystem-list_directory[path], filesystem-read_file[path]) freq=161, len=2, gain=161
+2026-03-13 03:37:30,443 [INFO] Round   5: merge (filesystem-write_file[content,path], local-claim_done[]) freq=138, len=2, gain=138
+2026-03-13 03:37:30,447 [INFO] Round   6: merge (canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token], canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]) freq=129, len=6, gain=69
+2026-03-13 03:37:30,451 [INFO] Round   7: merge (pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page], local-web_search[num_results,query]) freq=95, len=2, gain=95
+2026-03-13 03:37:30,454 [INFO] Round   8: merge (filesystem-list_directory[path], filesystem-read_file[head,path,tail]) freq=80, len=2, gain=80
+2026-03-13 03:37:30,458 [INFO] Round   9: merge (playwright_with_chunk-browser_snapshot_navigate_to_next_span[], playwright_with_chunk-browser_click[element,ref]) freq=80, len=2, gain=80
+2026-03-13 03:37:30,461 [INFO] Round  10: merge (emails-read_email[email_id], emails-download_attachment[attachment_filename,email_id]) freq=79, len=2, gain=79
+2026-03-13 03:37:30,465 [INFO] Round  11: merge (filesystem-write_file[content,path], terminal-run_command[command]) freq=78, len=2, gain=78
+2026-03-13 03:37:30,468 [INFO] Round  12: merge (word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index], word-set_table_alignment_all[filename,horizontal,table_index,vertical]) freq=78, len=2, gain=78
+2026-03-13 03:37:30,472 [INFO] Round  13: merge (playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref], playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref]) freq=74, len=4, gain=54
+2026-03-13 03:37:30,476 [INFO] Round  14: merge (excel-get_workbook_metadata[filepath,include_ranges], excel-read_data_from_excel[end_cell,filepath,preview_only,sheet_name,start_cell]) freq=66, len=2, gain=66
+2026-03-13 03:37:30,479 [INFO] Round  15: merge (local-python-execute[code], local-claim_done[]) freq=66, len=2, gain=66
+2026-03-13 03:37:30,483 [INFO] Round  16: merge (word-add_heading[filename,level,text], word-add_paragraph[filename,text]) freq=66, len=2, gain=66
+2026-03-13 03:37:30,486 [INFO] Round  17: merge (word-highlight_table_header[filename,header_color,table_index,text_color], word-set_table_cell_shading[col_index,filename,fill_color,row_index,table_index] ⊕ word-set_table_alignment_all[filename,horizontal,table_index,vertical]) freq=65, len=3, gain=65
+2026-03-13 03:37:30,490 [INFO] Round  18: merge (local-web_search[num_results,query], fetch-fetch_html[url]) freq=62, len=2, gain=62
+2026-03-13 03:37:30,493 [INFO] Round  19: merge (pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page], pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]) freq=61, len=4, gain=35
+2026-03-13 03:37:30,497 [INFO] Round  20: merge (filesystem-list_allowed_directories[], filesystem-list_directory[path]) freq=60, len=2, gain=60
+2026-03-13 03:37:30,501 [INFO] Round  21: merge (word-add_heading[filename,level,text] ⊕ word-add_paragraph[filename,text], word-add_table[cols,data,filename,rows]) freq=51, len=3, gain=51
+2026-03-13 03:37:30,507 [INFO] Round  22: merge (playwright_with_chunk-browser_navigate[url], playwright_with_chunk-browser_snapshot_navigate_to_next_span[]) freq=50, len=2, gain=50
+2026-03-13 03:37:30,511 [INFO] Round  23: merge (local-web_search[num_results,query], fetch-fetch_markdown[url]) freq=48, len=2, gain=48
+2026-03-13 03:37:30,514 [INFO] Round  24: merge (google_sheet-list_spreadsheets[], google_sheet-list_sheets[spreadsheet_id]) freq=48, len=2, gain=48
+2026-03-13 03:37:30,518 [INFO] Round  25: merge (playwright_with_chunk-browser_snapshot_search[pattern], playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]) freq=47, len=2, gain=47
+2026-03-13 03:37:30,522 [INFO] Round  26: merge (filesystem-read_file[path], terminal-run_command[command]) freq=46, len=2, gain=46
+2026-03-13 03:37:30,526 [INFO] Round  27: merge (pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query], excel-write_data_to_excel[data,filepath,sheet_name,start_cell]) freq=44, len=3, gain=44
+2026-03-13 03:37:30,530 [INFO] Round  28: merge (emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id], emails-read_email[email_id] ⊕ emails-download_attachment[attachment_filename,email_id]) freq=44, len=4, gain=25
+2026-03-13 03:37:30,533 [INFO] Round  29: merge (canvas-canvas_list_quizzes[course_id], canvas-canvas_start_quiz_attempt[course_id,quiz_id] ⊕ canvas-canvas_list_quiz_questions[course_id,quiz_id,quiz_submission_id,use_submission_endpoint] ⊕ canvas-canvas_submit_quiz_answers[answers,course_id,quiz_id,submission_id,validation_token]) freq=43, len=4, gain=43
+2026-03-13 03:37:30,537 [INFO] Round  30: merge (local-web_search[num_results,query], fetch-fetch_txt[url]) freq=42, len=2, gain=42
+2026-03-13 03:37:30,541 [INFO] Round  31: merge (filesystem-list_directory[path] ⊕ filesystem-read_file[path], pdf-tools-get_pdf_info[pdf_file_path] ⊕ pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page]) freq=39, len=4, gain=39
+2026-03-13 03:37:30,545 [INFO] Round  32: merge (snowflake-list_schemas[database], snowflake-list_tables[database,schema]) freq=38, len=2, gain=38
+2026-03-13 03:37:30,548 [INFO] Round  33: merge (emails-send_email[body,subject,to], local-claim_done[]) freq=38, len=2, gain=38
+2026-03-13 03:37:30,552 [INFO] Round  34: merge (excel-get_workbook_metadata[filepath], excel-read_data_from_excel[filepath,sheet_name]) freq=36, len=2, gain=36
+2026-03-13 03:37:30,556 [INFO] Round  35: merge (snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema], snowflake-describe_table[table_name]) freq=35, len=3, gain=35
+2026-03-13 03:37:30,560 [INFO] Round  36: merge (playwright_with_chunk-browser_snapshot_search[flags,pattern], playwright_with_chunk-browser_snapshot_navigate_to_span[spanIndex]) freq=34, len=2, gain=34
+2026-03-13 03:37:30,563 [INFO] Round  37: merge (local-python-execute[code], google_sheet-update_cells[data,range,sheet,spreadsheet_id]) freq=32, len=2, gain=32
+2026-03-13 03:37:30,567 [INFO] Round  38: merge (local-web_search[num_results,query], pdf-tools-read_pdf_pages[end_page,pdf_file_path,start_page] ⊕ local-web_search[num_results,query] ⊕ excel-write_data_to_excel[data,filepath,sheet_name,start_cell]) freq=32, len=4, gain=32
+2026-03-13 03:37:30,571 [INFO] Round  39: merge (google_forms-add_text_question[formId,questionTitle,required], google_forms-add_multiple_choice_question[formId,options,questionTitle,required]) freq=32, len=2, gain=32
+2026-03-13 03:37:30,575 [INFO] Round  40: merge (word-format_text[bold,end_pos,filename,font_name,font_size,paragraph_index,start_pos], word-format_text[bold,end_pos,filename,paragraph_index,start_pos]) freq=31, len=2, gain=31
+2026-03-13 03:37:30,578 [INFO] Round  41: merge (snowflake-list_databases[], snowflake-list_schemas[database] ⊕ snowflake-list_tables[database,schema] ⊕ snowflake-describe_table[table_name]) freq=30, len=4, gain=30
+2026-03-13 03:37:30,582 [INFO] Round  42: merge (playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref] ⊕ playwright_with_chunk-browser_type[element,ref,text] ⊕ playwright_with_chunk-browser_click[element,ref], playwright_with_chunk-browser_snapshot_navigate_to_next_span[] ⊕ playwright_with_chunk-browser_click[element,ref]) freq=30, len=6, gain=30
+2026-03-13 03:37:30,586 [INFO] Round  43: merge (playwright_with_chunk-browser_navigate[url], playwright_with_chunk-browser_click[element,ref]) freq=30, len=2, gain=30
+2026-03-13 03:37:30,590 [INFO] Round  44: merge (playwright_with_chunk-browser_type[element,ref,slowly,submit,text], playwright_with_chunk-browser_click[button,doubleClick,element,ref]) freq=30, len=2, gain=30
+2026-03-13 03:37:30,593 [INFO] Round  45: merge (filesystem-write_file[content,path] ⊕ terminal-run_command[command], filesystem-write_file[content,path] ⊕ terminal-run_command[command]) freq=29, len=4, gain=21
+2026-03-13 03:37:30,597 [INFO] Round  46: merge (canvas-canvas_health_check[], canvas-canvas_list_courses[]) freq=29, len=2, gain=29
+2026-03-13 03:37:30,601 [INFO] Round  47: merge (filesystem-write_file[content,path], filesystem-read_file[path]) freq=29, len=2, gain=29
+2026-03-13 03:37:30,604 [INFO] Round  48: merge (filesystem-list_allowed_directories[], filesystem-directory_tree[path]) freq=28, len=2, gain=28
+2026-03-13 03:37:30,608 [INFO] Round  49: merge (filesystem-list_allowed_directories[], filesystem-list_directory[path] ⊕ filesystem-read_file[path]) freq=28, len=3, gain=28
+2026-03-13 03:37:30,614 [INFO] Discovered 48 macros after pruning (from 50 merges)
+2026-03-13 03:37:30,778 [INFO] Step 1 done: 48 macros -> /seu_share2/home/fenglei/230250004/Agent_Tool/tool-use/AdaMacro/outputs/TOOLATHLON/skill_library.json
+2026-03-13 03:37:30,779 [INFO] Step 1 completed in 1.0s
+2026-03-13 03:37:30,779 [INFO] 
+======================================================================
+Step 2
+======================================================================
+2026-03-13 03:37:30,816 [INFO] Instantiated 48 skills from 48 macros
+2026-03-13 03:37:30,817 [INFO] Augmented tool library: 1250 atomic + 48 skills = 1298 total
+2026-03-13 03:37:30,867 [INFO] Step 2 done: 1298 tools -> /seu_share2/home/fenglei/230250004/Agent_Tool/tool-use/AdaMacro/outputs/TOOLATHLON/augmented_tools.json
+2026-03-13 03:37:30,869 [INFO] Step 2 completed in 0.1s
+2026-03-13 03:37:30,869 [INFO] 
+======================================================================
+Step 3
+======================================================================
+2026-03-13 03:37:30,958 [INFO] [Step 3.1] Generating SFT data...
+2026-03-13 03:37:33,509 [INFO] Generated 6036 SFT examples
+2026-03-13 03:37:33,509 [INFO]   Atomic only: 1153
+2026-03-13 03:37:33,509 [INFO]   Full skill: 799
+2026-03-13 03:37:33,509 [INFO]   Mixed (partial skill): 799
+2026-03-13 03:37:33,509 [INFO]   Stepwise next-tool: 3285
+2026-03-13 03:37:33,543 [INFO] [Step 3.2] Training SFT with qwen2.5-1.5b...
+2026-03-13 03:37:50,289 [INFO] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-03-13 03:37:50,289 [INFO] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2026-03-13 03:37:50,290 [INFO] NumExpr defaulting to 16 threads.
+2026-03-13 03:37:54,672 [INFO] Loading model: qwen2.5-1.5b from /seu_share2/home/fenglei/sharedata/Qwen2.5-1.5B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+2026-03-13 03:37:55,572 [INFO] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2026-03-13 03:38:01,886 [INFO] Loaded 6036 SFT examples
+2026-03-13 03:40:19,317 [INFO] Tokenized 6036 examples (0 skipped with 0 assistant tokens)
+2026-03-13 03:40:19,324 [INFO] Avg tokens per example: 3831 total, 431 assistant-only (11.3% supervised)
+2026-03-13 03:40:19,324 [INFO] Dataset size: 6036
+2026-03-13 03:40:19,414 [WARNING] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+The model is already on multiple devices. Skipping the move to device specified in `args`.
+2026-03-13 03:40:20,756 [INFO] Starting SFT training (assistant-only loss mask)...
+
+  0%|          | 0/378 [00:00<?, ?it/s]
+  0%|          | 1/378 [00:05<33:48,  5.38s/it]
+  1%|          | 2/378 [00:10<31:53,  5.09s/it]
+  1%|          | 3/378 [00:15<31:22,  5.02s/it]
+  1%|          | 4/378 [00:19<28:30,  4.57s/it]
+  1%|▏         | 5/378 [00:23<28:47,  4.63s/it]
+  2%|▏         | 6/378 [00:28<29:13,  4.71s/it]
+  2%|▏         | 7/378 [00:33<28:48,  4.66s/it]
+  2%|▏         | 8/378 [00:37<28:28,  4.62s/it]
+  2%|▏         | 9/378 [00:42<28:14,  4.59s/it]
+  3%|▎         | 10/378 [00:46<28:06,  4.58s/it]
+                                                
+
+  3%|▎         | 10/378 [00:46<28:06,  4.58s/it]
+  3%|▎         | 11/378 [00:51<28:18,  4.63s/it]
+  3%|▎         | 12/378 [00:56<28:03,  4.60s/it]
+  3%|▎         | 13/378 [01:01<28:31,  4.69s/it]
+  4%|▎         | 14/378 [01:05<28:12,  4.65s/it]
+  4%|▍         | 15/378 [01:09<27:16,  4.51s/it]
+  4%|▍         | 16/378 [01:14<27:17,  4.52s/it]
+  4%|▍         | 17/378 [01:18<27:14,  4.53s/it]
+  5%|▍         | 18/378 [01:23<26:36,  4.44s/it]
+  5%|▌         | 19/378 [01:28<27:30,  4.60s/it]
+  5%|▌         | 20/378 [01:32<27:14,  4.56s/it]
+                                                
+
+  5%|▌         | 20/378 [01:32<27:14,  4.56s/it]
+  6%|▌         | 21/378 [01:36<26:50,  4.51s/it]
+  6%|▌         | 22/378 [01:41<27:03,  4.56s/it]
+  6%|▌         | 23/378 [01:45<26:36,  4.50s/it]
+  6%|▋         | 24/378 [01:50<27:12,  4.61s/it]
+  7%|▋         | 25/378 [01:55<26:28,  4.50s/it]
+  7%|▋         | 26/378 [02:00<27:21,  4.66s/it]
+  7%|▋         | 27/378 [02:04<27:05,  4.63s/it]
+  7%|▋         | 28/378 [02:09<27:10,  4.66s/it]
+  8%|▊         | 29/378 [02:14<27:22,  4.71s/it]
+  8%|▊         | 30/378 [02:18<27:16,  4.70s/it]
+                                                
+
+  8%|▊         | 30/378 [02:18<27:16,  4.70s/it]
+  8%|▊         | 31/378 [02:23<26:53,  4.65s/it]
+  8%|▊         | 32/378 [02:27<26:15,  4.55s/it]
+  9%|▊         | 33/378 [02:32<26:24,  4.59s/it]
+  9%|▉         | 34/378 [02:37<26:23,  4.60s/it]
+  9%|▉         | 35/378 [02:41<26:49,  4.69s/it]
+ 10%|▉         | 36/378 [02:46<27:14,  4.78s/it]
+ 10%|▉         | 37/378 [02:51<27:21,  4.81s/it]
+ 10%|█         | 38/378 [02:56<27:03,  4.78s/it]
+ 10%|█         | 39/378 [03:01<27:10,  4.81s/it]
+ 11%|█         | 40/378 [03:05<26:32,  4.71s/it]
+                                                
+
+ 11%|█         | 40/378 [03:05<26:32,  4.71s/it]
+ 11%|█         | 41/378 [03:10<26:57,  4.80s/it]
+ 11%|█         | 42/378 [03:15<26:59,  4.82s/it]
+ 11%|█▏        | 43/378 [03:20<27:23,  4.91s/it]
+ 12%|█▏        | 44/378 [03:25<26:25,  4.75s/it]
+ 12%|█▏        | 45/378 [03:29<26:01,  4.69s/it]
+ 12%|█▏        | 46/378 [03:34<25:44,  4.65s/it]
+ 12%|█▏        | 47/378 [03:39<25:57,  4.70s/it]
+ 13%|█▎        | 48/378 [03:43<25:27,  4.63s/it]
+ 13%|█▎        | 49/378 [03:48<25:17,  4.61s/it]
+ 13%|█▎        | 50/378 [03:52<25:24,  4.65s/it]
+                                                
+
+ 13%|█▎        | 50/378 [03:52<25:24,  4.65s/it]
+ 13%|█▎        | 51/378 [03:57<24:37,  4.52s/it]
+ 14%|█▍        | 52/378 [04:02<25:02,  4.61s/it]
+ 14%|█▍        | 53/378 [04:06<24:59,  4.62s/it]
+ 14%|█▍        | 54/378 [04:10<24:22,  4.51s/it]
+ 15%|█▍        | 55/378 [04:15<23:59,  4.46s/it]
+ 15%|█▍        | 56/378 [04:19<23:48,  4.44s/it]
+ 15%|█▌        | 57/378 [04:24<23:55,  4.47s/it]
+ 15%|█▌        | 58/378 [04:28<23:54,  4.48s/it]
+ 16%|█▌        | 59/378 [04:33<24:40,  4.64s/it]
+ 16%|█▌        | 60/378 [04:38<24:11,  4.56s/it]
+                                                
+
+ 16%|█▌        | 60/378 [04:38<24:11,  4.56s/it]
+ 16%|█▌        | 61/378 [04:42<24:21,  4.61s/it]
+ 16%|█▋        | 62/378 [04:47<23:40,  4.50s/it]
+ 17%|█▋        | 63/378 [04:51<23:52,  4.55s/it]
+ 17%|█▋        | 64/378 [04:56<23:48,  4.55s/it]
+ 17%|█▋        | 65/378 [05:00<24:01,  4.60s/it]
+ 17%|█▋        | 66/378 [05:05<23:37,  4.54s/it]
+ 18%|█▊        | 67/378 [05:09<23:17,  4.49s/it]
+ 18%|█▊        | 68/378 [05:14<23:49,  4.61s/it]
+ 18%|█▊        | 69/378 [05:19<24:37,  4.78s/it]
+ 19%|█▊        | 70/378 [05:24<24:17,  4.73s/it]
+                                                
+
+ 19%|█▊        | 70/378 [05:24<24:17,  4.73s/it]
+ 19%|█▉        | 71/378 [05:29<23:57,  4.68s/it]
+ 19%|█▉        | 72/378 [05:34<24:42,  4.84s/it]
+ 19%|█▉        | 73/378 [05:38<24:10,  4.76s/it]
+ 20%|█▉        | 74/378 [05:43<24:25,  4.82s/it]
+ 20%|█▉        | 75/378 [05:48<23:57,  4.75s/it]
+ 20%|██        | 76/378 [05:53<23:50,  4.74s/it]
+ 20%|██        | 77/378 [05:57<23:49,  4.75s/it]
+ 21%|██        | 78/378 [06:02<23:24,  4.68s/it]
+ 21%|██        | 79/378 [06:06<22:25,  4.50s/it]
+ 21%|██        | 80/378 [06:11<22:40,  4.56s/it]
+                                                
+
+ 21%|██        | 80/378 [06:11<22:40,  4.56s/it]
+ 21%|██▏       | 81/378 [06:15<22:19,  4.51s/it]
+ 22%|██▏       | 82/378 [06:20<22:48,  4.62s/it]
+ 22%|██▏       | 83/378 [06:24<22:34,  4.59s/it]
+ 22%|██▏       | 84/378 [06:29<22:30,  4.59s/it]
+ 22%|██▏       | 85/378 [06:33<22:07,  4.53s/it]
+ 23%|██▎       | 86/378 [06:38<22:23,  4.60s/it]
+ 23%|██▎       | 87/378 [06:43<21:59,  4.54s/it]
+ 23%|██▎       | 88/378 [06:47<22:10,  4.59s/it]
+ 24%|██▎       | 89/378 [06:52<22:02,  4.58s/it]
+ 24%|██▍       | 90/378 [06:56<21:55,  4.57s/it]
+                                                
+
+ 24%|██▍       | 90/378 [06:56<21:55,  4.57s/it]
+ 24%|██▍       | 91/378 [07:01<22:32,  4.71s/it]
+ 24%|██▍       | 92/378 [07:06<22:27,  4.71s/it]
+ 25%|██▍       | 93/378 [07:11<22:02,  4.64s/it]
+ 25%|██▍       | 94/378 [07:15<22:13,  4.70s/it]
+ 25%|██▌       | 95/378 [07:20<22:10,  4.70s/it]
+ 25%|██▌       | 96/378 [07:25<21:54,  4.66s/it]
+ 26%|██▌       | 97/378 [07:30<22:05,  4.72s/it]
+ 26%|██▌       | 98/378 [07:34<21:46,  4.67s/it]
+ 26%|██▌       | 99/378 [07:39<21:32,  4.63s/it]
+ 26%|██▋       | 100/378 [07:43<21:36,  4.66s/it]
+                                                 
+
+ 26%|██▋       | 100/378 [07:43<21:36,  4.66s/it]
+ 27%|██▋       | 101/378 [07:48<21:03,  4.56s/it]
+ 27%|██▋       | 102/378 [07:52<20:57,  4.56s/it]
+ 27%|██▋       | 103/378 [07:57<20:44,  4.52s/it]
+ 28%|██▊       | 104/378 [08:01<20:00,  4.38s/it]
+ 28%|██▊       | 105/378 [08:05<20:10,  4.43s/it]
+ 28%|██▊       | 106/378 [08:10<20:42,  4.57s/it]
+ 28%|██▊       | 107/378 [08:15<20:34,  4.55s/it]
+ 29%|██▊       | 108/378 [08:19<20:41,  4.60s/it]
+ 29%|██▉       | 109/378 [08:24<20:33,  4.58s/it]
+ 29%|██▉       | 110/378 [08:29<20:33,  4.60s/it]
+                                                 
+
+ 29%|██▉       | 110/378 [08:29<20:33,  4.60s/it]
+ 29%|██▉       | 111/378 [08:34<21:03,  4.73s/it]
+ 30%|██▉       | 112/378 [08:38<21:02,  4.75s/it]
+ 30%|██▉       | 113/378 [08:43<20:51,  4.72s/it]
+ 30%|███       | 114/378 [08:48<21:10,  4.81s/it]
+ 30%|███       | 115/378 [08:53<20:40,  4.72s/it]
+ 31%|███       | 116/378 [08:57<19:58,  4.57s/it]
+ 31%|███       | 117/378 [09:01<19:52,  4.57s/it]
+ 31%|███       | 118/378 [09:06<19:36,  4.53s/it]
+ 31%|███▏      | 119/378 [09:11<19:47,  4.59s/it]
+ 32%|███▏      | 120/378 [09:15<20:04,  4.67s/it]
+                                                 
+
+ 32%|███▏      | 120/378 [09:15<20:04,  4.67s/it]
+ 32%|███▏      | 121/378 [09:20<20:16,  4.73s/it]
+ 32%|███▏      | 122/378 [09:25<19:56,  4.67s/it]
+ 33%|███▎      | 123/378 [09:29<19:30,  4.59s/it]
+ 33%|███▎      | 124/378 [09:34<19:45,  4.67s/it]
+ 33%|███▎      | 125/378 [09:38<19:12,  4.56s/it]
+ 33%|███▎      | 126/378 [09:43<19:34,  4.66s/it]
+ 34%|███▎      | 127/378 [09:48<19:32,  4.67s/it]
+ 34%|███▍      | 128/378 [09:53<19:19,  4.64s/it]
+ 34%|███▍      | 129/378 [09:57<19:11,  4.62s/it]
+ 34%|███▍      | 130/378 [10:02<19:15,  4.66s/it]
+                                                 
+
+ 34%|███▍      | 130/378 [10:02<19:15,  4.66s/it]
+ 35%|███▍      | 131/378 [10:06<18:38,  4.53s/it]
+ 35%|███▍      | 132/378 [10:11<18:27,  4.50s/it]
+ 35%|███▌      | 133/378 [10:15<18:27,  4.52s/it]
+ 35%|███▌      | 134/378 [10:19<18:13,  4.48s/it]
+ 36%|███▌      | 135/378 [10:24<18:26,  4.55s/it]
+ 36%|███▌      | 136/378 [10:29<18:22,  4.56s/it]
+ 36%|███▌      | 137/378 [10:34<18:31,  4.61s/it]
+ 37%|███▋      | 138/378 [10:38<18:47,  4.70s/it]
+ 37%|███▋      | 139/378 [10:43<18:44,  4.70s/it]
+ 37%|███▋      | 140/378 [10:48<18:17,  4.61s/it]
+                                                 
+
+ 37%|███▋      | 140/378 [10:48<18:17,  4.61s/it]
+ 37%|███▋      | 141/378 [10:52<18:02,  4.57s/it]
+ 38%|███▊      | 142/378 [10:57<17:57,  4.57s/it]
+ 38%|███▊      | 143/378 [11:01<18:01,  4.60s/it]
+ 38%|███▊      | 144/378 [11:06<18:05,  4.64s/it]
+ 38%|███▊      | 145/378 [11:11<18:07,  4.67s/it]
+ 39%|███▊      | 146/378 [11:15<17:43,  4.59s/it]
+ 39%|███▉      | 147/378 [11:20<17:48,  4.63s/it]
+ 39%|███▉      | 148/378 [11:25<18:00,  4.70s/it]
+ 39%|███▉      | 149/378 [11:29<17:53,  4.69s/it]
+ 40%|███▉      | 150/378 [11:34<17:39,  4.65s/it]
+                                                 
+
+ 40%|███▉      | 150/378 [11:34<17:39,  4.65s/it]
+ 40%|███▉      | 151/378 [11:39<17:48,  4.71s/it]
+ 40%|████      | 152/378 [11:43<17:44,  4.71s/it]
+ 40%|████      | 153/378 [11:48<17:52,  4.76s/it]
+ 41%|████      | 154/378 [11:53<17:45,  4.76s/it]
+ 41%|████      | 155/378 [11:58<17:27,  4.70s/it]
+ 41%|████▏     | 156/378 [12:03<17:44,  4.79s/it]
+ 42%|████▏     | 157/378 [12:08<17:45,  4.82s/it]
+ 42%|████▏     | 158/378 [12:12<17:01,  4.64s/it]
+ 42%|████▏     | 159/378 [12:16<16:55,  4.64s/it]
+ 42%|████▏     | 160/378 [12:21<17:06,  4.71s/it]
+                                                 
+
+ 42%|████▏     | 160/378 [12:21<17:06,  4.71s/it]
+ 43%|████▎     | 161/378 [12:26<17:05,  4.72s/it]
+ 43%|████▎     | 162/378 [12:31<17:11,  4.78s/it]
+ 43%|████▎     | 163/378 [12:36<17:04,  4.77s/it]
+ 43%|████▎     | 164/378 [12:40<16:56,  4.75s/it]
+ 44%|████▎     | 165/378 [12:45<16:29,  4.65s/it]
+ 44%|████▍     | 166/378 [12:49<15:47,  4.47s/it]
+ 44%|████▍     | 167/378 [12:54<16:08,  4.59s/it]
+ 44%|████▍     | 168/378 [12:58<16:11,  4.62s/it]
+ 45%|████▍     | 169/378 [13:03<16:09,  4.64s/it]
+ 45%|████▍     | 170/378 [13:08<16:12,  4.67s/it]
+                                                 
+
+ 45%|████▍     | 170/378 [13:08<16:12,  4.67s/it]
+ 45%|████▌     | 171/378 [13:13<16:29,  4.78s/it]
+ 46%|████▌     | 172/378 [13:18<16:17,  4.74s/it]
+ 46%|████▌     | 173/378 [13:22<15:50,  4.64s/it]
+ 46%|████▌     | 174/378 [13:27<15:50,  4.66s/it]
+ 46%|████▋     | 175/378 [13:31<15:46,  4.66s/it]
+ 47%|████▋     | 176/378 [13:36<15:45,  4.68s/it]
+ 47%|████▋     | 177/378 [13:40<15:22,  4.59s/it]
+ 47%|████▋     | 178/378 [13:45<15:25,  4.63s/it]
+ 47%|████▋     | 179/378 [13:50<15:35,  4.70s/it]
+ 48%|████▊     | 180/378 [13:55<15:31,  4.70s/it]
+                                                 
+
+ 48%|████▊     | 180/378 [13:55<15:31,  4.70s/it]
+ 48%|████▊     | 181/378 [13:59<15:17,  4.66s/it]
+ 48%|████▊     | 182/378 [14:04<15:32,  4.76s/it]
+ 48%|████▊     | 183/378 [14:09<15:28,  4.76s/it]
+ 49%|████▊     | 184/378 [14:14<15:20,  4.75s/it]
+ 49%|████▉     | 185/378 [14:19<15:17,  4.75s/it]
+ 49%|████▉     | 186/378 [14:23<14:50,  4.64s/it]
+ 49%|████▉     | 187/378 [14:27<14:30,  4.56s/it]
+ 50%|████▉     | 188/378 [14:32<14:11,  4.48s/it]
+ 50%|█████     | 189/378 [14:36<14:19,  4.55s/it]
+ 50%|█████     | 190/378 [14:41<14:14,  4.55s/it]
+                                                 
+
+ 50%|█████     | 190/378 [14:41<14:14,  4.55s/it]
+ 51%|█████     | 191/378 [14:46<14:19,  4.60s/it]
+ 51%|█████     | 192/378 [14:50<13:44,  4.43s/it]
+ 51%|█████     | 193/378 [14:54<13:40,  4.44s/it]
+ 51%|█████▏    | 194/378 [14:59<13:43,  4.47s/it]
+ 52%|█████▏    | 195/378 [15:03<13:36,  4.46s/it]
+ 52%|█████▏    | 196/378 [15:08<14:01,  4.62s/it]
+ 52%|█████▏    | 197/378 [15:12<13:48,  4.58s/it]
+ 52%|█████▏    | 198/378 [15:17<13:35,  4.53s/it]
+ 53%|█████▎    | 199/378 [15:22<13:59,  4.69s/it]
+ 53%|█████▎    | 200/378 [15:26<13:45,  4.64s/it]
+                                                 
+
+ 53%|█████▎    | 200/378 [15:26<13:45,  4.64s/it]
+ 53%|█████▎    | 201/378 [15:42<23:45,  8.05s/it]
+ 53%|█████▎    | 202/378 [15:47<20:36,  7.02s/it]
+ 54%|█████▎    | 203/378 [15:52<18:28,  6.34s/it]
+ 54%|█████▍    | 204/378 [15:57<16:57,  5.85s/it]
+ 54%|█████▍    | 205/378 [16:01<15:44,  5.46s/it]
+ 54%|█████▍    | 206/378 [16:06<14:51,  5.18s/it]
+ 55%|█████▍    | 207/378 [16:11<14:29,  5.09s/it]
+ 55%|█████▌    | 208/378 [16:15<13:37,  4.81s/it]
+ 55%|█████▌    | 209/378 [16:19<13:26,  4.77s/it]
+ 56%|█████▌    | 210/378 [16:24<13:18,  4.75s/it]
+                                                 
+
+ 56%|█████▌    | 210/378 [16:24<13:18,  4.75s/it]
+ 56%|█████▌    | 211/378 [16:29<13:13,  4.75s/it]
+ 56%|█████▌    | 212/378 [16:33<12:57,  4.69s/it]
+ 56%|█████▋    | 213/378 [16:38<12:36,  4.58s/it]
+ 57%|█████▋    | 214/378 [16:43<13:01,  4.76s/it]
+ 57%|█████▋    | 215/378 [16:48<12:51,  4.73s/it]
+ 57%|█████▋    | 216/378 [16:52<12:54,  4.78s/it]
+ 57%|█████▋    | 217/378 [16:57<12:45,  4.76s/it]
+ 58%|█████▊    | 218/378 [17:02<12:31,  4.70s/it]
+ 58%|█████▊    | 219/378 [17:06<12:19,  4.65s/it]
+ 58%|█████▊    | 220/378 [17:11<12:08,  4.61s/it]
+                                                 
+
+ 58%|█████▊    | 220/378 [17:11<12:08,  4.61s/it]
+ 58%|█████▊    | 221/378 [17:15<12:07,  4.63s/it]
+ 59%|█████▊    | 222/378 [17:20<12:16,  4.72s/it]
+ 59%|█████▉    | 223/378 [17:25<11:48,  4.57s/it]
+ 59%|█████▉    | 224/378 [17:29<11:47,  4.59s/it]
+ 60%|█████▉    | 225/378 [17:34<12:02,  4.72s/it]
+ 60%|█████▉    | 226/378 [17:39<11:53,  4.69s/it]
+ 60%|██████    | 227/378 [17:43<11:34,  4.60s/it]
+ 60%|██████    | 228/378 [17:48<11:41,  4.68s/it]
+ 61%|██████    | 229/378 [17:53<11:30,  4.64s/it]
+ 61%|██████    | 230/378 [17:58<11:52,  4.81s/it]
+                                                 
+
+ 61%|██████    | 230/378 [17:58<11:52,  4.81s/it]
+ 61%|██████    | 231/378 [18:02<11:34,  4.72s/it]
+ 61%|██████▏   | 232/378 [18:07<11:23,  4.68s/it]
+ 62%|██████▏   | 233/378 [18:12<11:12,  4.64s/it]
+ 62%|██████▏   | 234/378 [18:16<11:11,  4.66s/it]
+ 62%|██████▏   | 235/378 [18:21<11:09,  4.68s/it]
+ 62%|██████▏   | 236/378 [18:25<10:50,  4.58s/it]
+ 63%|██████▎   | 237/378 [18:30<10:51,  4.62s/it]
+ 63%|██████▎   | 238/378 [18:34<10:40,  4.57s/it]
+ 63%|██████▎   | 239/378 [18:39<10:48,  4.67s/it]
+ 63%|██████▎   | 240/378 [18:44<10:39,  4.63s/it]
+                                                 
+
+ 63%|██████▎   | 240/378 [18:44<10:39,  4.63s/it]
+ 64%|██████▍   | 241/378 [18:48<10:28,  4.59s/it]
+ 64%|██████▍   | 242/378 [18:53<10:26,  4.60s/it]
+ 64%|██████▍   | 243/378 [18:58<10:17,  4.57s/it]
+ 65%|██████▍   | 244/378 [19:03<10:38,  4.77s/it]
+ 65%|██████▍   | 245/378 [19:07<10:19,  4.66s/it]
+ 65%|██████▌   | 246/378 [19:11<09:57,  4.53s/it]
+ 65%|██████▌   | 247/378 [19:16<10:14,  4.69s/it]
+ 66%|██████▌   | 248/378 [19:21<10:04,  4.65s/it]
+ 66%|██████▌   | 249/378 [19:26<10:03,  4.68s/it]
+ 66%|██████▌   | 250/378 [19:30<09:57,  4.66s/it]
+                                                 
+
+ 66%|██████▌   | 250/378 [19:30<09:57,  4.66s/it]
+ 66%|██████▋   | 251/378 [19:35<09:48,  4.63s/it]
+ 67%|██████▋   | 252/378 [19:39<09:33,  4.55s/it]
+ 67%|██████▋   | 253/378 [19:44<09:35,  4.60s/it]
+ 67%|██████▋   | 254/378 [19:49<09:35,  4.64s/it]
+ 67%|██████▋   | 255/378 [19:53<09:28,  4.62s/it]
+ 68%|██████▊   | 256/378 [19:58<09:38,  4.74s/it]
+ 68%|██████▊   | 257/378 [20:03<09:29,  4.71s/it]
+ 68%|██████▊   | 258/378 [20:08<09:19,  4.66s/it]
+ 69%|██████▊   | 259/378 [20:12<09:19,  4.70s/it]
+ 69%|██████▉   | 260/378 [20:17<09:08,  4.65s/it]
+                                                 
+
+ 69%|██████▉   | 260/378 [20:17<09:08,  4.65s/it]
+ 69%|██████▉   | 261/378 [20:21<09:01,  4.63s/it]
+ 69%|██████▉   | 262/378 [20:26<08:47,  4.55s/it]
+ 70%|██████▉   | 263/378 [20:30<08:46,  4.57s/it]
+ 70%|██████▉   | 264/378 [20:35<08:45,  4.61s/it]
+ 70%|███████   | 265/378 [20:40<08:44,  4.65s/it]
+ 70%|███████   | 266/378 [20:45<08:52,  4.75s/it]
+ 71%|███████   | 267/378 [20:49<08:35,  4.65s/it]
+ 71%|███████   | 268/378 [20:54<08:27,  4.61s/it]
+ 71%|███████   | 269/378 [20:58<08:18,  4.58s/it]
+ 71%|███████▏  | 270/378 [21:03<08:17,  4.61s/it]
+                                                 
+
+ 71%|███████▏  | 270/378 [21:03<08:17,  4.61s/it]
+ 72%|███████▏  | 271/378 [21:08<08:11,  4.59s/it]
+ 72%|███████▏  | 272/378 [21:12<08:10,  4.63s/it]
+ 72%|███████▏  | 273/378 [21:17<07:59,  4.57s/it]
+ 72%|███████▏  | 274/378 [21:21<08:00,  4.62s/it]
+ 73%|███████▎  | 275/378 [21:26<07:50,  4.57s/it]
+ 73%|███████▎  | 276/378 [21:31<07:55,  4.67s/it]
+ 73%|███████▎  | 277/378 [21:35<07:52,  4.68s/it]
+ 74%|███████▎  | 278/378 [21:40<07:47,  4.68s/it]
+ 74%|███████▍  | 279/378 [21:45<07:34,  4.59s/it]
+ 74%|███████▍  | 280/378 [21:49<07:28,  4.58s/it]
+                                                 
+
+ 74%|███████▍  | 280/378 [21:49<07:28,  4.58s/it]
+ 74%|███████▍  | 281/378 [21:54<07:26,  4.61s/it]
+ 75%|███████▍  | 282/378 [21:58<07:20,  4.59s/it]
+ 75%|███████▍  | 283/378 [22:03<07:19,  4.63s/it]
+ 75%|███████▌  | 284/378 [22:08<07:14,  4.63s/it]
+ 75%|███████▌  | 285/378 [22:12<07:10,  4.63s/it]
+ 76%|███████▌  | 286/378 [22:17<07:22,  4.80s/it]
+ 76%|███████▌  | 287/378 [22:22<07:19,  4.83s/it]
+ 76%|███████▌  | 288/378 [22:27<07:05,  4.73s/it]
+ 76%|███████▋  | 289/378 [22:31<06:54,  4.65s/it]
+ 77%|███████▋  | 290/378 [22:35<06:33,  4.47s/it]
+                                                 
+
+ 77%|███████▋  | 290/378 [22:35<06:33,  4.47s/it]
+ 77%|███████▋  | 291/378 [22:40<06:23,  4.41s/it]
+ 77%|███████▋  | 292/378 [22:45<06:32,  4.56s/it]
+ 78%|███████▊  | 293/378 [22:49<06:32,  4.62s/it]
+ 78%|███████▊  | 294/378 [22:54<06:26,  4.60s/it]
+ 78%|███████▊  | 295/378 [22:59<06:27,  4.66s/it]
+ 78%|███████▊  | 296/378 [23:03<06:13,  4.56s/it]
+ 79%|███████▊  | 297/378 [23:08<06:08,  4.55s/it]
+ 79%|███████▉  | 298/378 [23:12<05:59,  4.50s/it]
+ 79%|███████▉  | 299/378 [23:16<05:56,  4.51s/it]
+ 79%|███████▉  | 300/378 [23:21<05:52,  4.52s/it]
+                                                 
+
+ 79%|███████▉  | 300/378 [23:21<05:52,  4.52s/it]
+ 80%|███████▉  | 301/378 [23:26<05:56,  4.63s/it]
+ 80%|███████▉  | 302/378 [23:31<05:55,  4.67s/it]
+ 80%|████████  | 303/378 [23:35<05:51,  4.69s/it]
+ 80%|████████  | 304/378 [23:40<05:51,  4.75s/it]
+ 81%|████████  | 305/378 [23:45<05:44,  4.72s/it]
+ 81%|████████  | 306/378 [23:50<05:40,  4.72s/it]
+ 81%|████████  | 307/378 [23:54<05:35,  4.72s/it]
+ 81%|████████▏ | 308/378 [23:59<05:36,  4.81s/it]
+ 82%|████████▏ | 309/378 [24:04<05:33,  4.84s/it]
+ 82%|████████▏ | 310/378 [24:09<05:25,  4.79s/it]
+                                                 
+
+ 82%|████████▏ | 310/378 [24:09<05:25,  4.79s/it]
+ 82%|████████▏ | 311/378 [24:14<05:18,  4.76s/it]
+ 83%|████████▎ | 312/378 [24:18<05:13,  4.74s/it]
+ 83%|████████▎ | 313/378 [24:23<04:58,  4.59s/it]
+ 83%|████████▎ | 314/378 [24:27<04:53,  4.58s/it]
+ 83%|████████▎ | 315/378 [24:32<04:56,  4.71s/it]
+ 84%|████████▎ | 316/378 [24:37<04:45,  4.61s/it]
+ 84%|████████▍ | 317/378 [24:41<04:46,  4.69s/it]
+ 84%|████████▍ | 318/378 [24:46<04:36,  4.60s/it]
+ 84%|████████▍ | 319/378 [24:50<04:33,  4.63s/it]
+ 85%|████████▍ | 320/378 [24:55<04:32,  4.70s/it]
+                                                 
+
+ 85%|████████▍ | 320/378 [24:55<04:32,  4.70s/it]
+ 85%|████████▍ | 321/378 [25:00<04:23,  4.62s/it]
+ 85%|████████▌ | 322/378 [25:04<04:15,  4.56s/it]
+ 85%|████████▌ | 323/378 [25:09<04:08,  4.52s/it]
+ 86%|████████▌ | 324/378 [25:13<04:02,  4.48s/it]
+ 86%|████████▌ | 325/378 [25:18<03:59,  4.52s/it]
+ 86%|████████▌ | 326/378 [25:22<03:58,  4.58s/it]
+ 87%|████████▋ | 327/378 [25:27<03:51,  4.55s/it]
+ 87%|████████▋ | 328/378 [25:31<03:47,  4.55s/it]
+ 87%|████████▋ | 329/378 [25:36<03:50,  4.70s/it]
+ 87%|████████▋ | 330/378 [25:41<03:37,  4.53s/it]
+                                                 
+
+ 87%|████████▋ | 330/378 [25:41<03:37,  4.53s/it]
+ 88%|████████▊ | 331/378 [25:45<03:30,  4.47s/it]
+ 88%|████████▊ | 332/378 [25:49<03:23,  4.43s/it]
+ 88%|████████▊ | 333/378 [25:54<03:22,  4.51s/it]
+ 88%|████████▊ | 334/378 [25:58<03:18,  4.52s/it]
+ 89%|████████▊ | 335/378 [26:03<03:16,  4.57s/it]
+ 89%|████████▉ | 336/378 [26:08<03:15,  4.65s/it]
+ 89%|████████▉ | 337/378 [26:13<03:13,  4.72s/it]
+ 89%|████████▉ | 338/378 [26:17<03:04,  4.62s/it]
+ 90%|████████▉ | 339/378 [26:22<02:55,  4.51s/it]
+ 90%|████████▉ | 340/378 [26:26<02:51,  4.52s/it]
+                                                 
+
+ 90%|████████▉ | 340/378 [26:26<02:51,  4.52s/it]
+ 90%|█████████ | 341/378 [26:30<02:46,  4.49s/it]
+ 90%|█████████ | 342/378 [26:36<02:49,  4.72s/it]
+ 91%|█████████ | 343/378 [26:40<02:39,  4.57s/it]
+ 91%|█████████ | 344/378 [26:45<02:37,  4.64s/it]
+ 91%|█████████▏| 345/378 [26:49<02:32,  4.63s/it]
+ 92%|█████████▏| 346/378 [26:53<02:22,  4.46s/it]
+ 92%|█████████▏| 347/378 [26:58<02:18,  4.46s/it]
+ 92%|█████████▏| 348/378 [27:03<02:17,  4.59s/it]
+ 92%|█████████▏| 349/378 [27:08<02:15,  4.68s/it]
+ 93%|█████████▎| 350/378 [27:12<02:08,  4.60s/it]
+                                                 
+
+ 93%|█████████▎| 350/378 [27:12<02:08,  4.60s/it]
+ 93%|█████████▎| 351/378 [27:17<02:03,  4.59s/it]
+ 93%|█████████▎| 352/378 [27:21<02:00,  4.65s/it]
+ 93%|█████████▎| 353/378 [27:26<01:57,  4.70s/it]
+ 94%|█████████▎| 354/378 [27:31<01:52,  4.70s/it]
+ 94%|█████████▍| 355/378 [27:35<01:44,  4.56s/it]
+ 94%|█████████▍| 356/378 [27:40<01:41,  4.61s/it]
+ 94%|█████████▍| 357/378 [27:45<01:40,  4.77s/it]
+ 95%|█████████▍| 358/378 [27:50<01:35,  4.75s/it]
+ 95%|█████████▍| 359/378 [27:54<01:26,  4.57s/it]
+ 95%|█████████▌| 360/378 [27:58<01:20,  4.46s/it]
+                                                 
+
+ 95%|█████████▌| 360/378 [27:58<01:20,  4.46s/it]
+ 96%|█████████▌| 361/378 [28:02<01:15,  4.43s/it]
+ 96%|█████████▌| 362/378 [28:07<01:12,  4.55s/it]
+ 96%|█████████▌| 363/378 [28:12<01:09,  4.64s/it]
+ 96%|█████████▋| 364/378 [28:17<01:05,  4.67s/it]
+ 97%|█████████▋| 365/378 [28:21<01:00,  4.63s/it]
+ 97%|█████████▋| 366/378 [28:26<00:55,  4.66s/it]
+ 97%|█████████▋| 367/378 [28:31<00:51,  4.68s/it]
+ 97%|█████████▋| 368/378 [28:35<00:46,  4.64s/it]
+ 98%|█████████▊| 369/378 [28:40<00:41,  4.56s/it]
+ 98%|█████████▊| 370/378 [28:44<00:36,  4.56s/it]
+                                                 
+
+ 98%|█████████▊| 370/378 [28:44<00:36,  4.56s/it]
+ 98%|█████████▊| 371/378 [28:49<00:32,  4.58s/it]
+ 98%|█████████▊| 372/378 [28:54<00:27,  4.58s/it]
+ 99%|█████████▊| 373/378 [28:58<00:22,  4.56s/it]
+ 99%|█████████▉| 374/378 [29:03<00:18,  4.51s/it]
+ 99%|█████████▉| 375/378 [29:07<00:13,  4.50s/it]
+ 99%|█████████▉| 376/378 [29:12<00:09,  4.67s/it]
+100%|█████████▉| 377/378 [29:16<00:04,  4.60s/it]
+100%|██████████| 378/378 [29:18<00:00,  3.56s/it]
+                                                 
+
+100%|██████████| 378/378 [29:25<00:00,  3.56s/it]
+100%|██████████| 378/378 [29:25<00:00,  4.67s/it]
+2026-03-13 04:09:51,550 [INFO] SFT training complete. Model saved to /seu_share2/home/fenglei/230250004/Agent_Tool/tool-use/AdaMacro/outputs/TOOLATHLON/checkpoints/sft/qwen2.5-1.5b
+2026-03-13 04:09:51,662 [INFO] Step 3 done: SFT checkpoint -> /seu_share2/home/fenglei/230250004/Agent_Tool/tool-use/AdaMacro/outputs/TOOLATHLON/checkpoints/sft/qwen2.5-1.5b
+2026-03-13 04:09:51,662 [INFO] Step 3 completed in 1940.8s
+2026-03-13 04:09:51,663 [INFO] 
+======================================================================
+Step 4
+======================================================================
+2026-03-13 04:09:52,013 [INFO] Online GRPO: rollouts are generated on-the-fly, skipping offline generation.
+2026-03-13 04:09:52,013 [INFO] [Step 4] Online GRPO training with qwen2.5-1.5b...
+2026-03-13 04:09:52,013 [INFO] Loading base model: /seu_share2/home/fenglei/sharedata/Qwen2.5-1.5B-Instruct
+2026-03-13 04:09:52,275 [INFO] Loading SFT LoRA from /seu_share2/home/fenglei/230250004/Agent_Tool/tool-use/AdaMacro/outputs/TOOLATHLON/checkpoints/sft/qwen2.5-1.5b
+2026-03-13 04:09:52,291 [INFO] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+/seu_share/home/fenglei/230250004/anaconda3/envs/tool/lib/python3.11/site-packages/peft/tuners/tuners_utils.py:282: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+  warnings.warn(
+2026-03-13 04:09:57,257 [INFO] Built freq index for 289 tools
+2026-03-13 04:09:57,635 [INFO] Training prompts: 1153
+2026-03-13 04:09:57,640 [INFO] Execution log → /seu_share2/home/fenglei/230250004/Agent_Tool/tool-use/AdaMacro/outputs/TOOLATHLON/checkpoints/grpo/qwen2.5-1.5b/execution_log.jsonl
+2026-03-13 04:09:57,640 [INFO] Online GRPO  G=4  epochs=3  lr=5e-06  grad_accum=8  total_steps≈432
+2026-03-13 04:09:57,640 [INFO] 
+============================================================
+Epoch 1/3
+============================================================
+2026-03-13 04:10:11,751 [INFO]     [t0_forced] completion(1603): 'skill_get_workbook_metadata_and_read_data_from", "arguments": {"filepath": "/workspace/dumps/workspace/Best_Selling_Prod'
+2026-03-13 04:10:13,227 [INFO]     [t1_forced] completion(200): 'skill_execute_and_claim_done", "arguments": {"code": "\\nimport pandas as pd\\n\\ndf = pd.read_excel(\'/workspace/dumps/work'
+2026-03-13 04:10:15,130 [INFO]     [t2_forced] completion(239): '_done", "arguments": {"code": "\\nimport pandas as pd\\n\\ndf = pd.read_excel(\'/workspace/dumps/workspace/Best_Selling_Prod'
+2026-03-13 04:10:22,127 [INFO]     [t0_forced] completion(57): 'sketch_draw_product_image", "arguments": {}}\n</tool_call>'
+2026-03-13 04:10:24,141 [INFO]     [t1_forced] completion(143): 'google-sheets-export_range", "arguments": {"spreadsheetId": "1vKdNcZqBwzgQFtR6YyfO5eLWuUJkGmSxHhAqoXb87V", "range": "She'
+2026-03-13 04:10:25,023 [INFO]     [t2_forced] completion(56): 'kx3oT5XmVHnDl7A", "range": "Sheet1!A1:F"}} \n</tool_call>'
+2026-03-13 04:10:40,762 [INFO]     [t0_forced] completion(1900): 'canvas-canvas_update_assignment", "arguments": {"course_id": 2, "assignment_id": 4}}\n</tool_call>\n<tool_call>\n{"name": "'
+2026-03-13 04:10:42,438 [INFO]     [t1_forced] completion(209): 'github-create_or_update_file", "arguments": {"branch": "main", "path": "process_warehouses.sh", "sha": "", "owner": "tea'
+2026-03-13 04:10:48,049 [INFO]     [t2_forced] completion(671): '"path": "/var/www/html/supabase/src/app/shared/datas/warehouses.ts", "content": "export const warehouses = [\\n  {\\n    \\'
+2026-03-13 04:10:50,579 [INFO]     [oracle_seed] forced first tool: skill_execute_and_claim_done
+2026-03-13 04:10:51,397 [INFO]     [t1_forced] completion(129): 'skill_get_workbook_metadata_and_read_data_from", "arguments": {"filepath": "/workspace/dumps/workspace/Sheet1.csv"}}\n</t'
+2026-03-13 04:10:51,701 [INFO]     [t2_forced] completion(45): 'Task completed successfully.\n</tool_response>'
+2026-03-13 04:10:54,805 [INFO]   [prompt 0] gt_tools=['woocommerce-woo_products_list', 'woocommerce-woo_orders_list', 'woocommerce-woo_products_variations_list', 'local-python-execute']...
+2026-03-13 04:10:54,805 [INFO]     g=0 steps=3 skills=2 relevant=1 completed=True reward=0.350 (task=0.33 order=1.00 sk_bonus=+0.02 irrel=1 eff=0.00) adv=+0.78 tools=['skill_get_workbook_metadata_and_read_data_from', 'skill_execute_and_claim_done', '_done']
+2026-03-13 04:10:54,805 [INFO]     g=1 steps=3 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-1.66 tools=['sketch_draw_product_image', 'google-sheets-export_range', 'kx3oT5XmVHnDl7A']
+2026-03-13 04:10:54,805 [INFO]     g=2 steps=3 skills=0 relevant=0 completed=True reward=0.280 (task=0.28 order=0.33 sk_bonus=+0.00 irrel=0 eff=0.00) adv=+0.10 tools=['canvas-canvas_update_assignment', 'github-create_or_update_file', 'woocommerce-woo_orders_list']
+2026-03-13 04:10:54,805 [INFO]     g=3 steps=3 skills=2 relevant=1 completed=True reward=0.350 (task=0.33 order=1.00 sk_bonus=+0.02 irrel=1 eff=0.00) adv=+0.78 tools=['skill_execute_and_claim_done', 'skill_get_workbook_metadata_and_read_data_from', 'github-update_file']
+2026-03-13 04:11:09,971 [INFO]     [t0_forced] completion(2264): 'canvas-canvas_health_check", "arguments": {}}\n</tool_call>\n<tool_call>\n{"name": "canvas-canvas_create_announcement", "ar'
+2026-03-13 04:11:11,745 [INFO]     [t1_forced] completion(276): 'canvas-canvas_create_announcement", "arguments": {"course_id": 1, "title": "Art History Quiz Announcement", "message": "'
+2026-03-13 04:11:15,108 [INFO]     [t2_forced] completion(434): 'canvas-canvas_create_assignment", "arguments": {"course_id": 47, "name": "Classic Art History Questions", "description":'
+2026-03-13 04:11:44,912 [INFO]     [t0_forced] completion(1865): 'canvas-canvas_health_check", "arguments": {}}\n</tool_call>\n<tool_call>\n{"name": "canvas-canvas_create_announcement", "ar'
+2026-03-13 04:11:46,610 [INFO]     [t1_forced] completion(269): 'canvas-canvas_create_announcement", "arguments": {"course_id": 25, "title": "Art History Quiz Announcement", "message": '
+2026-03-13 04:11:48,929 [INFO]     [t2_forced] completion(279): 'canvas-canvas_create_assignment", "arguments": {"course_id": 25, "name": "Classic Art History Questions", "description":'
+2026-03-13 04:12:04,985 [INFO]     [t0_forced] completion(1031): 'canvas-canvas_canvas_health_check", "arguments": {}}\n</tool_call>\n<tool_call>\n{"name": "canvas-canvas_create_announcemen'
+2026-03-13 04:12:12,401 [INFO]     [t1_forced] completion(1140): 'canvas-canvas_create_announcement", "arguments": {"course_id": 1, "title": "Art History Quiz Announce", "message": "Hi e'
+2026-03-13 04:12:12,816 [INFO]     [t2_forced] completion(63): 'canvas-canvas_create_assignment", "arguments": {}}\n</tool_call>'
+2026-03-13 04:12:17,696 [INFO]   [prompt 1] gt_tools=['canvas-canvas_list_courses', 'canvas-canvas_create_quiz', 'canvas-canvas_create_quiz_question']...
+2026-03-13 04:12:17,696 [INFO]     g=0 steps=3 skills=0 relevant=0 completed=True reward=0.167 (task=0.17 order=1.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['canvas-canvas_health_check', 'canvas-canvas_create_announcement', 'canvas-canvas_create_assignment']
+2026-03-13 04:12:17,696 [INFO]     g=1 steps=3 skills=0 relevant=0 completed=True reward=0.167 (task=0.17 order=1.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['canvas-canvas_health_check', 'canvas-canvas_create_announcement', 'canvas-canvas_create_assignment']
+2026-03-13 04:12:17,696 [INFO]     g=2 steps=3 skills=0 relevant=0 completed=True reward=0.167 (task=0.17 order=1.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['canvas-canvas_canvas_health_check', 'canvas-canvas_create_announcement', 'canvas-canvas_create_assignment']
+2026-03-13 04:12:17,696 [INFO]     g=3 steps=3 skills=1 relevant=1 completed=True reward=0.400 (task=0.33 order=1.00 sk_bonus=+0.07 irrel=0 eff=0.00) adv=+1.73 tools=['skill_health_check_and_list_courses', 'skill_announce_new_test_and_send_instructions', 'skill_grade_and_list_grades_for_current_user']
+2026-03-13 04:13:46,635 [INFO]   [prompt 2] gt_tools=['local-web_search', 'playwright_with_chunk-browser_navigate', 'playwright_with_chunk-browser_snapshot_navigate_to_next_span', 'playwright_with_chunk-browser_snapshot_search']...
+2026-03-13 04:13:46,701 [INFO]     g=0 steps=10 skills=0 relevant=0 completed=False reward=0.150 (task=0.15 order=0.50 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.73 tools=['get_historical_stock_prices', 'get_stock_price_by_date', 'yahoo-finance_get_stock_price_by_date', 'yahoo-finance_get_historical_stock_prices', 'word_set_table_cell_alignment']
+2026-03-13 04:13:46,701 [INFO]     g=1 steps=5 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-1.21 tools=['get_historical_stock_prices', 'skill_get_historical_stock_prices', 'get_stock_price_by_date', 'yahoo-finance-get_stock_price_by_date', 'yahoo-finance-get_historical_stock_prices']
+2026-03-13 04:13:46,701 [INFO]     g=2 steps=8 skills=2 relevant=1 completed=True reward=0.302 (task=0.29 order=0.67 sk_bonus=+0.01 irrel=1 eff=0.00) adv=+0.74 tools=['get_historical_stock_prices', 'get_stock_price_by_date', 'yahoo_finance_get_stock_price_by_date', 'google_sheets_list_spreadsheets', 'skill_list_dirs_and_list_dir_and_read_file']
+2026-03-13 04:13:46,701 [INFO]     g=3 steps=5 skills=1 relevant=1 completed=True reward=0.350 (task=0.29 order=1.00 sk_bonus=+0.06 irrel=0 eff=0.00) adv=+1.20 tools=['skill_execute_and_claim_done', 'get_historical_stock_prices', 'get_stock_price_by_date', 'yahoo-finance_get_historical_stock_prices', 'yahoo-finance_get_stock_price_by_date']
+2026-03-13 04:15:20,030 [INFO]   [prompt 3] gt_tools=['google-cloud-bigquery_run_query', 'google-cloud-bigquery_list_datasets', 'local-claim_done']...
+2026-03-13 04:15:20,030 [INFO]     g=0 steps=6 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['google_map-maps_distance_matrix', 'check_context_status', 'playwright_with_chunk_browser_type', 'list_tools', 'github-list_branches']
+2026-03-13 04:15:20,041 [INFO]     g=1 steps=7 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['google-map-maps-distance_matrix', 'check_context_status', 'playwright_with_chunk_browser_type', 'list_tools', 'github-list_branches']
+2026-03-13 04:15:20,041 [INFO]     g=2 steps=6 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['google-map-maps_distance_matrix', 'playwright-with-chunk-browser-type', 'list-tools', 'github-list-branches', 'wandb-query-wandb-support-bot']
+2026-03-13 04:15:20,041 [INFO]     g=3 steps=3 skills=1 relevant=1 completed=True reward=0.400 (task=0.33 order=1.00 sk_bonus=+0.07 irrel=0 eff=0.00) adv=+1.73 tools=['skill_write_file_and_claim_done', 'google_maps_distance_matrix', 'check_context_status']
+2026-03-13 04:17:44,310 [INFO]   [prompt 4] gt_tools=['filesystem-directory_tree', 'pdf-tools-get_pdf_info', 'pdf-tools-read_pdf_pages', 'filesystem-read_file']...
+2026-03-13 04:17:44,310 [INFO]     g=0 steps=3 skills=1 relevant=0 completed=True reward=0.050 (task=0.10 order=0.00 sk_bonus=-0.05 irrel=1 eff=0.00) adv=-0.67 tools=['notion-API-get-block-children', 'github-list_files', 'skill_set_table_cell_and_set_table_alignment']
+2026-03-13 04:17:44,311 [INFO]     g=1 steps=4 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.53 tools=['notion-API-get-block-children', 'k8s-list_api_resources', 'huggingface-model_search', 'github-create_branch']
+2026-03-13 04:17:44,311 [INFO]     g=2 steps=9 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.53 tools=['k8s-get_node_status', 'huggingface-model_search', 'k8s-api_server_version_details', 'google-cloud-storage-buckets_list', 'github-github_repos_list_issues_and_pulls']
+2026-03-13 04:17:44,311 [INFO]     g=3 steps=2 skills=1 relevant=1 completed=True reward=0.940 (task=0.59 order=0.60 sk_bonus=+0.08 irrel=0 eff=0.27) adv=+1.73 tools=['skill_list_dir_and_read_file_and_get_pdf_and_read_pdf', 'huggingface-model_search']
+2026-03-13 04:28:54,380 [INFO] step 1/432 | loss=-0.2822  reward=0.257  skill_ratio=0.10  avg_steps=5.6  lr=1.16e-07  epoch=0.01
+2026-03-13 04:40:38,791 [INFO] step 2/432 | loss=0.3806  reward=0.247  skill_ratio=0.13  avg_steps=5.1  lr=2.33e-07  epoch=0.01
+2026-03-13 04:55:55,572 [INFO] step 3/432 | loss=0.2886  reward=0.188  skill_ratio=0.13  avg_steps=4.9  lr=3.49e-07  epoch=0.02
+2026-03-13 05:12:16,822 [INFO] step 4/432 | loss=0.5346  reward=0.141  skill_ratio=0.08  avg_steps=4.9  lr=4.65e-07  epoch=0.03
+2026-03-13 05:29:04,997 [INFO] step 5/432 | loss=0.0898  reward=0.187  skill_ratio=0.13  avg_steps=5.4  lr=5.81e-07  epoch=0.03
+2026-03-13 05:47:53,871 [INFO] step 6/432 | loss=0.5180  reward=0.181  skill_ratio=0.11  avg_steps=4.8  lr=6.98e-07  epoch=0.04
+2026-03-13 05:53:53,529 [INFO]   [prompt 50] gt_tools=['filesystem-read_file', 'terminal-run_command', 'filesystem-search_files', 'filesystem-list_directory']...
+2026-03-13 05:53:53,530 [INFO]     g=0 steps=4 skills=0 relevant=0 completed=True reward=0.150 (task=0.15 order=0.33 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.17 tools=['k8s-exec_in_pod', 'k8s-install_helm_chart', 'k8s-kubectl_apply', 'k8s-kubectl_context']
+2026-03-13 05:53:53,530 [INFO]     g=1 steps=4 skills=0 relevant=0 completed=True reward=0.150 (task=0.15 order=0.33 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.17 tools=['k8s-exec_in_pod', 'k8s-install_helm_chart', 'k8s-kubectl_apply', 'k8s-kubectl_context']
+2026-03-13 05:53:53,530 [INFO]     g=2 steps=8 skills=2 relevant=0 completed=True reward=0.020 (task=0.10 order=0.00 sk_bonus=-0.08 irrel=1 eff=0.00) adv=-1.23 tools=['k8s-exec_in_pod', 'sleep', 'kubectl_exec', 'sleep', 'skill_get_workbook_metadata_and_read_data_from']
+2026-03-13 05:53:53,530 [INFO]     g=3 steps=5 skills=0 relevant=0 completed=True reward=0.361 (task=0.36 order=0.50 sk_bonus=+0.00 irrel=0 eff=0.00) adv=+1.56 tools=['terminal-run_command', 'k8s-exec_in_pod', 'redis', 'kubectl', 'kubectl']
+2026-03-13 06:01:07,715 [INFO] step 7/432 | loss=0.2739  reward=0.195  skill_ratio=0.15  avg_steps=5.0  lr=8.14e-07  epoch=0.05
+2026-03-13 06:15:15,651 [INFO] step 8/432 | loss=0.6234  reward=0.179  skill_ratio=0.05  avg_steps=6.4  lr=9.30e-07  epoch=0.06
+2026-03-13 06:30:44,674 [INFO] step 9/432 | loss=0.3101  reward=0.169  skill_ratio=0.07  avg_steps=6.7  lr=1.05e-06  epoch=0.06
+2026-03-13 06:47:04,890 [INFO] step 10/432 | loss=0.1147  reward=0.195  skill_ratio=0.09  avg_steps=4.8  lr=1.16e-06  epoch=0.07
+2026-03-13 07:30:08,505 [INFO]   [prompt 100] gt_tools=['filesystem-read_file', 'memory-read_graph', 'playwright_with_chunk-browser_navigate', 'playwright_with_chunk-browser_snapshot_navigate_to_next_span']...
+2026-03-13 07:30:08,505 [INFO]     g=0 steps=4 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['google_forms-add_multiple_choice_question', 'google_forms-add_text_question', 'google_forms-create_form', 'google_forms-get_form']
+2026-03-13 07:30:08,505 [INFO]     g=1 steps=4 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['google_forms-add_multiple_choice_question', 'google_forms-add_text_question', 'google_forms-create_form', 'google_forms-get_form']
+2026-03-13 07:30:08,505 [INFO]     g=2 steps=3 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.58 tools=['google_forms-add_multiple_choice_question', 'google_forms-add_multiple_choice_question', 'google_forms-create_form']
+2026-03-13 07:30:08,505 [INFO]     g=3 steps=3 skills=1 relevant=1 completed=True reward=0.410 (task=0.34 order=0.67 sk_bonus=+0.07 irrel=0 eff=0.00) adv=+1.73 tools=['playwright_with_chunk-browser_click', 'playwright_with_chunk-browser_type', 'skill_type_and_click']
+2026-03-13 08:08:18,102 [INFO] step 15/432 | loss=0.3800  reward=0.241  skill_ratio=0.12  avg_steps=5.2  lr=1.74e-06  epoch=0.10
+2026-03-13 09:06:10,162 [INFO]   [prompt 150] gt_tools=['k8s-kubectl_get', 'k8s-ping', 'k8s-kubectl_describe', 'k8s-kubectl_scale']...
+2026-03-13 09:06:10,162 [INFO]     g=0 steps=3 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.21 tools=['k8s-exec_in_pod', 'k8s-exec_in_pod', 'k8s-exec_in_pod']
+2026-03-13 09:06:10,438 [INFO]     g=1 steps=10 skills=0 relevant=0 completed=False reward=0.000 (task=0.00 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.91 tools=['k8s-exec_in_pod', 'k8s-exec_in_pod', 'k8s-exec_in_pod', '8s-exec_in_pod', '8s-exec_in_pod']
+2026-03-13 09:06:10,438 [INFO]     g=2 steps=5 skills=0 relevant=0 completed=True reward=0.050 (task=0.05 order=1.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.56 tools=['kubectl-sh-data', 'k8s-start_job', 'k8s-namespace_show', 'kubectl-get_namespace', 'hug-help-hf_search']
+2026-03-13 09:06:10,438 [INFO]     g=3 steps=5 skills=3 relevant=2 completed=True reward=0.370 (task=0.30 order=1.00 sk_bonus=+0.07 irrel=1 eff=0.00) adv=+1.68 tools=['skill_list_dir_and_read_file_and_get_pdf_and_read_pdf', 'canvas-canvas_create_quiz_question', 'huggingface-model_search', 'skill_add_heading_and_add_paragraph', 'skill_read_pdf_and_web_search']
+2026-03-13 09:31:49,356 [INFO] step 20/432 | loss=0.4462  reward=0.221  skill_ratio=0.13  avg_steps=5.0  lr=2.33e-06  epoch=0.14
+2026-03-13 10:41:20,815 [INFO] step 25/432 | loss=0.4533  reward=0.169  skill_ratio=0.10  avg_steps=5.4  lr=2.91e-06  epoch=0.17
+2026-03-13 10:43:36,664 [INFO]   [prompt 200] gt_tools=['filesystem-list_allowed_directories', 'filesystem-directory_tree', 'filesystem-read_file', 'pdf-tools-get_pdf_info']...
+2026-03-13 10:43:36,665 [INFO]     g=0 steps=3 skills=1 relevant=1 completed=True reward=0.350 (task=0.29 order=1.00 sk_bonus=+0.06 irrel=0 eff=0.00) adv=+1.64 tools=['pdf-tools-get_pdf_info', 'pdf-tools-read_pdf_pages', 'skill_get_pdf_and_read_pdf']
+2026-03-13 10:43:36,665 [INFO]     g=1 steps=4 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.81 tools=['pdf-tools-search_next_page', 'google_sheet-get_multiple_spreadsheet_summary', 'local-browse_history', 'word-get_document_info']
+2026-03-13 10:43:36,675 [INFO]     g=2 steps=4 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.81 tools=['google-sheet-get_multiple_spreadsheet_summary', 'google-sheet-get_multiple_spreadsheet_summary', 'excel-customize_cell_values', 'woocommerceshop-products-product-id-subsidiaries']
+2026-03-13 10:43:36,675 [INFO]     g=3 steps=3 skills=0 relevant=0 completed=True reward=0.182 (task=0.18 order=0.50 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.01 tools=['filesystem-write_file', 'local-start_server', 'fetch-fetch_txt']
+2026-03-13 11:46:26,051 [INFO] step 30/432 | loss=0.2293  reward=0.222  skill_ratio=0.09  avg_steps=5.6  lr=3.49e-06  epoch=0.21
+2026-03-13 12:07:21,347 [INFO]   [prompt 250] gt_tools=['filesystem-list_directory', 'filesystem-read_file', 'terminal-run_command', 'emails-send_email']...
+2026-03-13 12:07:21,348 [INFO]     g=0 steps=10 skills=0 relevant=0 completed=False reward=0.000 (task=0.00 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.99 tools=['git-log', 'github-get_repo', 'git-log', 'github-get_repo', 'git-show']
+2026-03-13 12:07:21,348 [INFO]     g=1 steps=4 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.48 tools=['git-github-add-comment-to-pull-request-review', 'git-github-add-issue-comment', 'git-github-create-and-update-file', 'git-github-create-or-update-file']
+2026-03-13 12:07:21,348 [INFO]     g=2 steps=7 skills=1 relevant=1 completed=True reward=0.155 (task=0.10 order=1.00 sk_bonus=+0.06 irrel=0 eff=0.00) adv=-0.20 tools=['git_git_add', 'github-create_issue', 'github-list_releases', 'skill_read_email_and_download_attachment', 'git_git_show']
+2026-03-13 12:07:21,348 [INFO]     g=3 steps=7 skills=2 relevant=2 completed=True reward=0.518 (task=0.40 order=1.00 sk_bonus=+0.10 irrel=0 eff=0.02) adv=+1.66 tools=['skill_list_dir_and_read_file', 'git-git_add', 'git-git_checkout', 'git-git_commit', 'git-git_log']
+2026-03-13 13:00:12,995 [INFO] step 35/432 | loss=0.1525  reward=0.194  skill_ratio=0.12  avg_steps=5.3  lr=4.07e-06  epoch=0.24
+2026-03-13 13:41:15,755 [INFO]   [prompt 300] gt_tools=['notion-API-post-search', 'notion-API-post-database-query', 'google_map-maps_geocode', 'google_map-maps_distance_matrix']...
+2026-03-13 13:41:15,778 [INFO]     g=0 steps=4 skills=0 relevant=0 completed=True reward=0.240 (task=0.24 order=0.33 sk_bonus=+0.00 irrel=0 eff=0.00) adv=+1.11 tools=['google_', 'notion-API-create-a-comment', 'notion-API-create-a-database', 'notion-API-delete-a-block']
+2026-03-13 13:41:15,778 [INFO]     g=1 steps=8 skills=1 relevant=0 completed=True reward=0.144 (task=0.19 order=0.50 sk_bonus=-0.05 irrel=1 eff=0.00) adv=+0.03 tools=['google_', 'skill_get_workbook_metadata_and_read_data_from', 'google_', 'google_', 'google_']
+2026-03-13 13:41:15,778 [INFO]     g=2 steps=0 skills=0 relevant=0 completed=False reward=0.000 (task=0.00 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-1.60 tools=[]
+2026-03-13 13:41:15,778 [INFO]     g=3 steps=8 skills=0 relevant=0 completed=True reward=0.182 (task=0.18 order=0.50 sk_bonus=+0.00 irrel=0 eff=0.00) adv=+0.46 tools=['google_map-maps_geocode', 'woocommerce-woo_storeinfo_api_get_storeinfo', 'google_map-maps_geocode', 'word-get_document_text', 'playwright-with-chunk-browser-type']
+2026-03-13 14:17:07,695 [INFO] step 40/432 | loss=0.4828  reward=0.209  skill_ratio=0.12  avg_steps=5.3  lr=4.65e-06  epoch=0.28
+2026-03-13 15:08:01,576 [INFO]   [prompt 350] gt_tools=['google_sheet-list_spreadsheets', 'google_sheet-list_sheets', 'google_sheet-get_sheet_data', 'local-python-execute']...
+2026-03-13 15:08:01,577 [INFO]     g=0 steps=3 skills=1 relevant=0 completed=True reward=0.050 (task=0.10 order=0.00 sk_bonus=-0.05 irrel=1 eff=0.00) adv=-0.95 tools=['woocommerce-woo_customers_list', 'skill_read_email_and_download_attachment', 'google-cloud-bigquery_export_table']
+2026-03-13 15:08:01,590 [INFO]     g=1 steps=3 skills=1 relevant=1 completed=True reward=0.200 (task=0.14 order=1.00 sk_bonus=+0.06 irrel=0 eff=0.00) adv=+1.40 tools=['skill_write_file_and_claim_done', 'filesystem-list_allowed_directories', 'playlists_getPlaylistItems']
+2026-03-13 15:08:01,590 [INFO]     g=2 steps=3 skills=1 relevant=0 completed=True reward=0.050 (task=0.10 order=0.00 sk_bonus=-0.05 irrel=1 eff=0.00) adv=-0.95 tools=['playwright_with-chunk-browser_click', 'skill_read_email_and_download_attachment', 'pdf-tools-get_pdf_info']
+2026-03-13 15:08:01,590 [INFO]     g=3 steps=3 skills=0 relevant=0 completed=True reward=0.143 (task=0.14 order=1.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=+0.50 tools=['google_sheet-create_spreadsheet', 'canvas-canvas_get_submission', 'memory-open_nodes']
+2026-03-13 15:25:43,350 [INFO] step 45/432 | loss=-0.0183  reward=0.210  skill_ratio=0.15  avg_steps=4.9  lr=5.00e-06  epoch=0.31
+2026-03-13 16:28:09,709 [INFO] step 50/432 | loss=0.0151  reward=0.258  skill_ratio=0.15  avg_steps=5.2  lr=5.00e-06  epoch=0.35
+2026-03-13 16:29:30,388 [INFO]   [prompt 400] gt_tools=['filesystem-list_directory', 'filesystem-read_file', 'pdf-tools-get_pdf_info', 'pdf-tools-read_pdf_pages']...
+2026-03-13 16:29:30,388 [INFO]     g=0 steps=4 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-1.02 tools=['get_historical_stock_prices', 'local-exec', 'playwright_with-chunk-browser_click', 'snowflake-write-query']
+2026-03-13 16:29:30,388 [INFO]     g=1 steps=4 skills=2 relevant=2 completed=True reward=0.754 (task=0.46 order=0.75 sk_bonus=+0.10 irrel=0 eff=0.19) adv=+0.88 tools=['skill_list_dirs_and_list_dir_and_read_file', 'skill_read_pdf_and_web_search', 'local-exec', 'playwright_with_chunk-browser_click']
+2026-03-13 16:29:30,388 [INFO]     g=2 steps=4 skills=0 relevant=0 completed=True reward=0.114 (task=0.11 order=1.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.98 tools=['geth', 'youtube-channels_listVideos', 'playwright_with-chunk-browser_open_and_assert_element_text', 'pdf-tools-read_pdf']
+2026-03-13 16:29:30,388 [INFO]     g=3 steps=5 skills=1 relevant=1 completed=True reward=0.832 (task=0.60 order=0.80 sk_bonus=+0.08 irrel=0 eff=0.15) adv=+1.11 tools=['skill_list_dir_and_read_file_and_get_pdf_and_read_pdf', 'get_historical_stock_prices', 'get_stock_price_by_date', 'yahoo_finance_get_stock_price_by_date', 'local_exec']
+2026-03-13 17:27:18,954 [INFO] step 55/432 | loss=0.1209  reward=0.227  skill_ratio=0.23  avg_steps=4.7  lr=4.99e-06  epoch=0.38
+2026-03-13 17:41:14,694 [INFO]   [prompt 450] gt_tools=['filesystem-list_allowed_directories', 'filesystem-list_directory', 'filesystem-read_file', 'excel-read_data_from_excel']...
+2026-03-13 17:41:14,695 [INFO]     g=0 steps=9 skills=0 relevant=0 completed=True reward=0.062 (task=0.06 order=1.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.44 tools=['huggingface-hf_doc_search', 'excel-get_workbook_metadata', 'pdf-tools_read_pdf_pages', 'arxiv_local_download_paper', 'google-cloud-storage_search_objects']
+2026-03-13 17:41:14,695 [INFO]     g=1 steps=10 skills=0 relevant=0 completed=False reward=0.106 (task=0.11 order=0.50 sk_bonus=+0.00 irrel=0 eff=0.00) adv=+0.08 tools=['huggingface-hf_doc_search', 'excel-get_workbook_metadata', 'pdf-tools_read_pdf_pages', 'arxiv_local_download_paper', 'google_cloud_storage_search_objects']
+2026-03-13 17:41:14,695 [INFO]     g=2 steps=10 skills=0 relevant=0 completed=False reward=0.000 (task=0.00 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-1.19 tools=['skill_list_dir_and_read_file_and_snap', 'file_system_ls_and_ls', 'pdf_tool_pdf_read', 'hugging_face_document_search', 'arxiv_downloader']
+2026-03-13 17:41:14,695 [INFO]     g=3 steps=10 skills=1 relevant=1 completed=False reward=0.228 (task=0.17 order=0.67 sk_bonus=+0.06 irrel=0 eff=0.00) adv=+1.54 tools=['skill_list_dirs_and_list_dir_and_read_file', 'excel-read_excel_content', 'skill_read_csv_and_run_cmd_and_execute', 'google_cloud_storage_ls_recursive_path_or_glob', 'huggingface_search_tool_docs_and_skill']
+2026-03-13 18:22:37,967 [INFO] step 60/432 | loss=0.2868  reward=0.253  skill_ratio=0.24  avg_steps=5.0  lr=4.98e-06  epoch=0.42
+2026-03-13 18:59:25,701 [INFO]   [prompt 500] gt_tools=['pdf-tools-get_pdf_info', 'pdf-tools-read_pdf_pages', 'github-search_repositories', 'filesystem-read_file']...
+2026-03-13 18:59:25,701 [INFO]     g=0 steps=5 skills=5 relevant=2 completed=True reward=0.236 (task=0.25 order=0.33 sk_bonus=-0.01 irrel=2 eff=0.00) adv=-1.27 tools=['skill_list_dir_and_read_file', 'skill_get_workbook_metadata_and_read_data_from', 'skill_read_pdf_and_web_search', 'skill_list_dir_and_read_file', 'skill_snapshot_next_and_click']
+2026-03-13 18:59:25,701 [INFO]     g=1 steps=5 skills=5 relevant=4 completed=True reward=0.922 (task=0.62 order=1.00 sk_bonus=+0.10 irrel=1 eff=0.20) adv=+1.11 tools=['skill_get_pdf_and_read_pdf', 'skill_list_dir_and_read_file', 'skill_write_file_and_claim_done', 'skill_get_workbook_metadata_and_read_data_from', 'skill_execute_and_claim_done']
+2026-03-13 18:59:25,701 [INFO]     g=2 steps=6 skills=4 relevant=3 completed=True reward=0.407 (task=0.34 order=0.67 sk_bonus=+0.07 irrel=0 eff=0.00) adv=-0.67 tools=['skill_list_dir_and_read_file', 'skill_write_file_and_write_file', 'skill_read_pdf_and_web_search', 'skill_start_quiz_attempt_and_download_code_repo', 'skill_list_dir_and_read_file']
+2026-03-13 18:59:25,701 [INFO]     g=3 steps=2 skills=1 relevant=1 completed=True reward=0.843 (task=0.42 order=0.40 sk_bonus=+0.07 irrel=0 eff=0.35) adv=+0.84 tools=['skill_list_dir_and_read_file_and_get_pdf_and_read_pdf', 'local-print_and_claim_done']
+2026-03-13 19:21:54,820 [INFO] step 65/432 | loss=-0.0503  reward=0.284  skill_ratio=0.31  avg_steps=5.3  lr=4.96e-06  epoch=0.45
+2026-03-13 20:09:21,493 [INFO]   [prompt 550] gt_tools=['google_sheet-list_spreadsheets', 'google_sheet-list_sheets', 'google_sheet-get_sheet_data', 'local-python-execute']...
+2026-03-13 20:09:21,493 [INFO]     g=0 steps=3 skills=1 relevant=0 completed=True reward=0.050 (task=0.10 order=0.00 sk_bonus=-0.05 irrel=1 eff=0.00) adv=-0.48 tools=['skill_list_dir_and_read_file', 'canvas-canvas_update_assignment', 'word-insert_line_or_paragraph_near_text']
+2026-03-13 20:09:21,493 [INFO]     g=1 steps=4 skills=2 relevant=0 completed=True reward=0.020 (task=0.10 order=0.00 sk_bonus=-0.08 irrel=1 eff=0.00) adv=-1.07 tools=['excel-read_data_from_excel', 'word-create_document', 'skill_add_heading_and_add_paragraph', 'skill_add_heading_and_add_paragraph']
+2026-03-13 20:09:21,587 [INFO]     g=2 steps=4 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=+0.52 tools=['playwright_with_chunk-browser_navigation', 'word_list_tables_and_insert_rows_and_columns', 'user', 'woocommerce-woo_products_get']
+2026-03-13 20:09:21,587 [INFO]     g=3 steps=5 skills=0 relevant=0 completed=True reward=0.125 (task=0.12 order=1.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=+1.02 tools=['google_sheet-update_cells', 'Ue8zCI', 'local-sleep', 'YtWmDk', 'playwright_with_chunk-browser_snapshot_current']
+2026-03-13 20:20:29,971 [INFO] step 70/432 | loss=-0.1150  reward=0.252  skill_ratio=0.27  avg_steps=5.0  lr=4.94e-06  epoch=0.49
+2026-03-13 21:18:18,588 [INFO] step 75/432 | loss=0.3307  reward=0.257  skill_ratio=0.35  avg_steps=4.9  lr=4.92e-06  epoch=0.52
+2026-03-13 21:20:16,414 [INFO]   [prompt 600] gt_tools=['snowflake-list_databases', 'snowflake-list_schemas', 'snowflake-list_tables', 'snowflake-describe_table']...
+2026-03-13 21:20:16,414 [INFO]     g=0 steps=6 skills=4 relevant=2 completed=True reward=0.207 (task=0.17 order=1.00 sk_bonus=+0.04 irrel=0 eff=0.00) adv=+0.51 tools=['skill_list_dir_and_read_file', 'skill_read_pdf_and_web_search', 'skill_list_dir_and_read_file', 'skill_read_pdf_and_web_search', 'rail_12306-get-stations-code-in-city']
+2026-03-13 21:20:16,414 [INFO]     g=1 steps=7 skills=5 relevant=3 completed=True reward=0.265 (task=0.23 order=0.67 sk_bonus=+0.04 irrel=0 eff=0.00) adv=+1.24 tools=['skill_list_dir_and_read_file', 'skill_write_file_and_claim_done', 'google-sheet-spreadsheets-list', 'skill_list_dir_and_read_file', 'filesystem-list_directory']
+2026-03-13 21:20:16,790 [INFO]     g=2 steps=2 skills=0 relevant=0 completed=True reward=0.050 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=-0.05) adv=-1.45 tools=['word-highlight_table_header', 'csv-list_csv_files_in_workspace_root_or_local_disk']
+2026-03-13 21:20:16,790 [INFO]     g=3 steps=6 skills=0 relevant=0 completed=True reward=0.142 (task=0.14 order=0.50 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.30 tools=['terminal-run_command', 'filesystem-list_directory', 'local-exec', 'playwright_with_chunk-browser_snapshot_navigate_to_span', 'playwright_with_chunk-browser_type']
+2026-03-13 22:09:30,237 [INFO] step 80/432 | loss=-0.3596  reward=0.223  skill_ratio=0.31  avg_steps=5.1  lr=4.89e-06  epoch=0.56
+2026-03-13 22:24:34,706 [INFO]   [prompt 650] gt_tools=['canvas-canvas_health_check', 'canvas-canvas_list_courses', 'canvas-canvas_list_quizzes', 'canvas-canvas_start_quiz_attempt']...
+2026-03-13 22:24:34,706 [INFO]     g=0 steps=4 skills=2 relevant=0 completed=True reward=0.253 (task=0.33 order=1.00 sk_bonus=-0.08 irrel=1 eff=0.00) adv=+1.60 tools=['skill_list_dir_and_read_file', 'skill_list_dir_and_read_file', 'canvas-canvas_start_quiz_attempt', 'canvas-canvas_list_quiz_questions']
+2026-03-13 22:24:34,706 [INFO]     g=1 steps=5 skills=5 relevant=0 completed=True reward=0.000 (task=0.10 order=0.00 sk_bonus=-0.15 irrel=3 eff=0.00) adv=-1.13 tools=['skill_get_pdf_and_read_pdf', 'skill_write_file_and_claim_done', 'skill_execute_and_claim_done', 'skill_get_pdf_and_read_pdf', 'skill_write_file_and_claim_done']
+2026-03-13 22:24:34,706 [INFO]     g=2 steps=5 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.05 tools=['local-file-system-list-directory', 'playwright_with_chunk-browser_type', 'playwright_with_chunk-browser_click', 'playwright_with_chunk-browser_type', 'playwright_with_chunk-browser_click']
+2026-03-13 22:24:34,706 [INFO]     g=3 steps=1 skills=0 relevant=0 completed=True reward=0.067 (task=0.17 order=1.00 sk_bonus=+0.00 irrel=0 eff=-0.10) adv=-0.41 tools=['canvas-canvas_health_check']
+2026-03-13 23:07:39,101 [INFO] step 85/432 | loss=0.0721  reward=0.267  skill_ratio=0.37  avg_steps=5.1  lr=4.86e-06  epoch=0.59
+2026-03-13 23:36:06,184 [INFO]   [prompt 700] gt_tools=['memory-read_graph', 'filesystem-list_allowed_directories', 'filesystem-directory_tree', 'local-python-execute']...
+2026-03-13 23:36:06,185 [INFO]     g=0 steps=4 skills=2 relevant=2 completed=True reward=0.292 (task=0.19 order=1.00 sk_bonus=+0.10 irrel=0 eff=0.00) adv=+1.47 tools=['skill_list_dir_and_read_file', 'skill_write_file_and_claim_done', 'canvas-canvas_create_conversation', 'canvas-canvas_create_assignment']
+2026-03-13 23:36:06,185 [INFO]     g=1 steps=4 skills=1 relevant=0 completed=True reward=0.050 (task=0.10 order=0.00 sk_bonus=-0.05 irrel=1 eff=0.00) adv=-1.16 tools=['skill_get_workbook_metadata_and_read_data_from', 'canvas-canvas_create_assignment', 'canvas-canvas_create_conversation', 'canvas-canvas_create_assignment']
+2026-03-13 23:36:06,185 [INFO]     g=2 steps=9 skills=0 relevant=0 completed=True reward=0.100 (task=0.10 order=0.00 sk_bonus=+0.00 irrel=0 eff=0.00) adv=-0.62 tools=['pdf-tools-read_pdf_pages', 'local-web_search', 'kubernetes-explorer', 'skill_read_pdf_and_write_files_and_send_file_attachments', 'skill_list_dir_and_run_shell_cmd_and_download_file']
+2026-03-13 23:36:06,185 [INFO]     g=3 steps=8 skills=1 relevant=1 completed=True reward=0.187 (task=0.13 order=0.50 sk_bonus=+0.06 irrel=0 eff=0.00) adv=+0.32 tools=['skill_write_file_and_read_file', 'skill_get_pdf_and_read_pdf_and_download', 'canvas-canvas_health_check', 'canvas-canvas_create_announcement', 'excel-read_data_from_excel']
+2026-03-14 00:02:25,773 [INFO] step 90/432 | loss=0.0974  reward=0.271  skill_ratio=0.37  avg_steps=5.2  lr=4.82e-06  epoch=0.62
